@@ -1,0 +1,129 @@
+#gc {
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	border-style: dotted;
+}
+
+.selected {
+    -webkit-transform: rotateY(180deg); /* Safari */
+    transform: rotateY(180deg);
+    background-color: white;
+    transition: all 0.5s ease-in;
+}
+
+.fade {
+    opacity: 1 !important;
+    transition: all 1.5s ease-in;
+}
+
+.fade-animation {
+    animation: fade-anim 2s linear;
+}
+
+@keyframes fade-anim {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+
+.flex-row {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    margin-top: 20px;
+   text-align: center;
+}
+
+.cards-3 {
+    width: 200px;
+    height: 188px;
+    border: 1px solid #ff6666;
+    margin: 2px;
+}
+
+.cards-4 {
+    display: inline-block;
+    width: 200px;
+    margin:2px;
+    height:188px;
+    border: 1px solid #ff6666;
+
+}
+
+.cards-6 {
+    width: 200px;
+    margin:2px;
+    height:188px;
+    border: 1px solid #ff6666;
+}
+
+.cards {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.5s ease-out;
+}
+
+.hidden {
+    background-color: #ff6666;
+    color:transparent;
+    opacity: 0;
+}
+
+#win {
+    display: block;
+    width: 100%;
+    color: #40bf40;
+    font-size: 72px;
+    text-align: center;
+    font-weight: 700;
+    opacity: 0;
+}
+
+.background-1 {
+    background-image: url(img/1.png);
+    transition: all 0.5s ease-in;
+}
+
+.background-2 {
+    background-image: url(img/2.png);
+    transition: all 0.5s ease-in;
+}
+.background-3 {
+    background-image: url(img/3.png);
+    transition: all 0.5s ease-in;
+}
+.background-4 {
+    background-image: url(img/4.png);
+    transition: all 0.5s ease-in;
+}
+.background-5 {
+    background-image: url(img/5.png);
+    transition: all 0.5s ease-in;
+}
+.background-6 {
+    background-image: url(img/6.png);
+    transition: all 0.5s ease-in;
+}
+.background-7 {
+    background-image: url(img/7.png);
+    transition: all 0.5s ease-in;
+}
+.background-8 {
+    background-image: url(img/8.png);
+    transition: all 0.5s ease-in;
+}
+.background-9 {
+    background-image: url(img/9.png);
+    transition: all 0.5s ease-in;
+}

@@ -10,7 +10,7 @@ window.onload = function(){
     console.log("Ready");
     //clear session storage;
     window.sessionStorage.clear();
-	countdown = 180;
+	countdown = 10;
 	statrGame();
 	updateScore(0);
 	updateSpeedText();
@@ -88,10 +88,12 @@ function updateTimer(){
 }
 
 function endMultitaskingGame(){
+	recordScore(score);
 	clearInterval(generateInterval);
 	clearInterval(moveInterval);
 	clearInterval(scoreInterval);
 	clearInterval(speedInterval);
 	clearInterval(timerInterval);
-	document.getElementById("gc").innerHTML = ""
+	document.getElementById("gc").innerHTML = "";
+	printRecord();
 }

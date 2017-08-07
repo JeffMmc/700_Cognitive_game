@@ -4,6 +4,11 @@
 	float: left;
 }
 
+.scorebar p{
+	float: left;
+	margin-left: 10px;
+}
+
 .field{
 	width: 400px;
 	height: 400px;

@@ -1,34 +1,37 @@
 var canvas;
 var vehicleElement;
+var countdown;
 var obstacleType = ["block", "bonus", "breakable"];
 var fields = new Array(2);
+var generateInterval, moveInterval, scoreInterval, speedInterval,timerInterval;
 
 
 window.onload = function(){
     console.log("Ready");
     //clear session storage;
     window.sessionStorage.clear();
+	countdown = 180;
 	statrGame();
 	updateScore(0);
 	updateSpeedText();
-	
-	
 }
 
 function statrGame(){
 	canvas = document.getElementById("gc");
 	var trackNum = 2;
 	canvas.appendChild(scorebar());
-
+	updateTimer();
 	for(var i = 0; i < trackNum; i++){
 		fields[i] = field(i);
 		canvas.appendChild(fields[i]);
 	}
 	generateObstacle();
-	setInterval(generateObstacle, 5000);
-	setInterval(obstacleMove, 1000/30);
-	setInterval(updateScore, 1000);
-	setInterval(updateSpeed, 5000);
+	
+	generateInterval = setInterval(generateObstacle, 5000);
+	moveInterval = setInterval(obstacleMove, 1000/30);
+	scoreInterval = setInterval(updateScore, 1000);
+	speedInterval = setInterval(updateSpeed, 5000);
+	timerInterval = setInterval(updateTimer, 1000);
 }
 
 function scorebar(){
@@ -39,9 +42,12 @@ function scorebar(){
 	scoreElement.id = "score";
 	var speedElement = document.createElement("p");
 	speedElement.id = "speed";
+	var countdownTimer = document.createElement("p");
+	countdownTimer.id = "countdownTimer";
 	
 	scorebar.appendChild(scoreElement);
 	scorebar.appendChild(speedElement);
+	scorebar.appendChild(countdownTimer);
 	
 	return scorebar;
 }
@@ -67,5 +73,24 @@ function field(fieldNum){
 	return field;
 }
 
+function updateTimer(){
+	if(countdown > 0){
+		countdown -= 1;
+		var minutes = Math.floor(countdown/60);
+		var seconds = Math.floor(countdown % 60);
+	
+		var timerText = document.getElementById("countdownTimer");
+		timerText.innerHTML = "Time left: " + minutes + ":" + seconds;
+	}else{
+		endMultitaskingGame();
+	}
+	
+}
 
-
+function endMultitaskingGame(){
+	clearInterval(generateInterval);
+	clearInterval(moveInterval);
+	clearInterval(scoreInterval);
+	clearInterval(speedInterval);
+	clearInterval(timerInterval);
+}

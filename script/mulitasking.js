@@ -93,4 +93,5 @@ function endMultitaskingGame(){
 	clearInterval(scoreInterval);
 	clearInterval(speedInterval);
 	clearInterval(timerInterval);
+	document.getElementById("gc").innerHTML = ""
 }

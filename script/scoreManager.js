@@ -1,14 +1,17 @@
 var score = 0;
-var scoreText = document.getElementById("score");
+var scoreText;
+var speedText;
 var collision = false;
 var overallSpeed = 3;
 
 function updateScore(){
+	scoreText = document.getElementById("score");
 	score += overallSpeed;
 	scoreText.innerHTML = "Score : " + score;
 }
 
 function bonusScore(addition){
+	scoreText = document.getElementById("score");
 	console.log(addition);
 	score = score + addition;
 	scoreText.innerHTML = "Score : " + score;
@@ -23,5 +26,11 @@ function updateSpeed(){
 		overallSpeed -= 1;
 	}
 	
+	updateSpeedText();
 	collision = false;
+}
+
+function updateSpeedText(){
+	speedText = document.getElementById("speed");
+	speedText.innerHTML = "Speed : " + overallSpeed;
 }

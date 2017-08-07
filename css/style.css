@@ -1,9 +1,7 @@
 #gc {
-	margin-top: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 80%;
-	border-style: dotted;
+	width: 800px;
+	height: 480px;
+	float: left;
 }
 
 .selected {

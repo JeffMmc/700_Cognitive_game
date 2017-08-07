@@ -11,7 +11,7 @@ function generateObstacle(){
 			//Action of block
 			case 0:
 			obs.onclick = function(){
-				
+				//No 
 			};
 			break;
 			
@@ -33,9 +33,10 @@ function generateObstacle(){
 	}
 }
 
+//Create an obstacle object
 function obstacle(obsType){
 	var obstacle = document.createElement("div");
-	obstacle.posX = 60;
+	obstacle.posX = 0;
 	obstacle.posY = 0;
 	
 	obstacle.classList.add(obsType);
@@ -46,6 +47,7 @@ function obstacle(obsType){
 	return obstacle;
 }
 
+//Update the position of obstacles
 function obstacleMove(){
 	
 	var obstacle = document.getElementsByClassName("obstacle");
@@ -53,11 +55,12 @@ function obstacleMove(){
 		obstacle[i].posY += overallSpeed;
 		obstacle[i].style.top = obstacle[i].posY + 'px';
 		
+		//Destroy the obstacle when it leave the track
 		if(obstacle[i].posY > 420){
 			destroyObstacle(obstacle[i]);
-		}else if(obstacle[i].posY > 290){
+		}//Deal with collision
+		else if(obstacle[i].posY > 310){
 			var childOfTrack = obstacle[i].parentNode.children;
-			
 			for(var j = 0; j < childOfTrack.length; j++){
 				if(childOfTrack[j].className == "vehicle"){
 					if(obstacle[i].className=="bonus obstacle"){
@@ -67,8 +70,6 @@ function obstacleMove(){
 						collision = true;
 						destroyObstacle(obstacle[i]);
 					}
-					
-					
 				}
 			}
 		}
@@ -77,18 +78,5 @@ function obstacleMove(){
 }
 
 function destroyObstacle(obs){
-	
 	obs.parentNode.removeChild(obs);
-}
-
-function blockAction(){
-	
-}
-
-function bonusAction(){
-	
-}
-
-function breakableAction(){
-	
 }

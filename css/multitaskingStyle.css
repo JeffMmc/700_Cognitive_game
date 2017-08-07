@@ -1,15 +1,19 @@
+.scorebar{
+	width: 800px;
+	height: 80px;
+	float: left;
+}
+
 .field{
-	width: 40%;
-	height: 500px;
-	border-style: dotted;
-	margin-top: 30px;
-	margin-left: 5%;
+	width: 400px;
+	height: 400px;
+	float: left;
 }
 
 .track {
 	position: relative;
-	width: 200px;
-	height: 500px;
+	width: 100px;
+	height: 480px;
 	margin-left: 12.5%;
 	float:left;
 	border-top-style: solid;
@@ -20,30 +24,30 @@
 
 .vehicle{
 	background-color: #03F;
-	height: 120px;
-	width: 100px;
+	height: 100px;
+	width: 80px;
 	position: absolute;
-	left: 50px;
 	bottom: 10px;
+	left: 10px;
 }
 
 .block {
-	height: 80px;
-	width: 80px;
+	height: 60px;
+	width: 100px;
 	background-color: red;
 	position: absolute;
 }
 
 .bonus{
-	height: 80px;
-	width: 80px;
+	height: 60px;
+	width: 100px;
 	background-color: green;
 	position: absolute;
 }
 
 .breakable {
-	height: 80px;
-	width: 80px;
+	height: 60px;
+	width: 100px;
 	background-color: yellow;
 	position: absolute;
 }

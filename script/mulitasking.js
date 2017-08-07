@@ -8,14 +8,17 @@ window.onload = function(){
     console.log("Ready");
     //clear session storage;
     window.sessionStorage.clear();
-	updateScore(0);
 	statrGame();
+	updateScore(0);
+	updateSpeedText();
+	
 	
 }
 
 function statrGame(){
 	canvas = document.getElementById("gc");
 	var trackNum = 2;
+	canvas.appendChild(scorebar());
 
 	for(var i = 0; i < trackNum; i++){
 		fields[i] = field(i);
@@ -28,9 +31,24 @@ function statrGame(){
 	setInterval(updateSpeed, 5000);
 }
 
+function scorebar(){
+	var scorebar = document.createElement("div");
+	scorebar.classList.add("scorebar");
+	
+	var scoreElement = document.createElement("p");
+	scoreElement.id = "score";
+	var speedElement = document.createElement("p");
+	speedElement.id = "speed";
+	
+	scorebar.appendChild(scoreElement);
+	scorebar.appendChild(speedElement);
+	
+	return scorebar;
+}
+
 function field(fieldNum){
 	var field = document.createElement("div");
-	field.classList.add("flex-row");
+	field.classList.add("field");
 	field.tracks = new Array(2);
 	
 	for(var j = 0; j < 2; j++){

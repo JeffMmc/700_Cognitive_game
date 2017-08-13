@@ -1,8 +1,20 @@
 .menuLink{
 	width: 380px;
-	height: 400px;
-	margin-right:10px;
+	height: 380px;
+	margin-right:5px;
+	margin-left:5px;
 	float: left;
 	text-align: center;
 	border-style: solid;
+}
+
+.menuLink h1{
+	line-height: 300px;
+}
+
+#title{
+	width:800px;
+	height: 100px;
+	float: left;
+	text-align: center;
 }

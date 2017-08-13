@@ -2,6 +2,7 @@
 	width: 800px;
 	height: 480px;
 	float: left;
+	border-style: dotted;
 }
 
 .selected {

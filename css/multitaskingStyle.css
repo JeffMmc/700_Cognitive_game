@@ -18,7 +18,7 @@
 .track {
 	position: relative;
 	width: 100px;
-	height: 480px;
+	height: 380px;
 	margin-left: 12.5%;
 	float:left;
 	border-top-style: solid;
@@ -55,4 +55,39 @@
 	width: 100px;
 	background-color: yellow;
 	position: absolute;
+}
+
+#result_score{
+	width: 800px;
+	height: 100px;
+	float: left;
+	text-align: center;
+}
+
+#result_data{
+	width: 400px;
+	height: 280px;
+	position: absolute;
+	top:110px;
+	left:200px;
+	float: left;
+}
+
+#result_data p{
+	line-height:60px;
+}
+
+#result_menu{
+	width: 800px;
+	height: 100px;
+	position: absolute;
+	top: 390px;
+	float: left;
+	text-align: center;
+}
+
+#result_menu button{
+	margin-top:40px;
+	margin-left:100px;
+	margin-right:100px;
 }

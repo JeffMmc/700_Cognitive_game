@@ -10,27 +10,36 @@ function recordMultaskingScore(){
 		localStorage.setItem('lastMultitasking', logDate);
 		var highscore;
 		
-		for (var i = 0; i < 20; i++){
+		var recorded = false;
+		var i = 0;
+		while(!recorded){
 			if(localStorage.getItem('Mt' + i) == null){
 				highscore = localStorage.getItem('Mt' + (i-1));
 				//New High score
 				if(score > highscore){
 					persistScore(i - 1);
 				}
-				break;
+				recorded = true;
 			}
+			i += 1;
 		}
 		
 	}else{
 		//First score of the day
 		localStorage.setItem('lastMultitasking', logDate);
 		
-		for (var i = 0; i < 20; i++){
+		var recorded = false;
+		var i = 0;
+		while(!recorded){
 			if(localStorage.getItem('Mt' + i) == null){
-				persistScore(i);
+				highscore = localStorage.getItem('Mt' + (i-1));
+				//New High score
+				if(score > highscore){
+					persistScore(i - 1);
+				}
 				recorded = true;
-				break;
 			}
+			i += 1;
 		}
 	}
 	
@@ -75,9 +84,30 @@ function dateFormating(){
 
 //For debugging
 function printRecord(){
-	for (var i = 0; i < 20; i++){
-		if(localStorage.getItem('MultitaskingScore' + i) != null){
-			console.log(i + " : " + localStorage.getItem('MultitaskingScore' + i))
-		}
+	var i = 0;
+	while (localStorage.getItem('Mt' + i) != null){
+		console.log(i + " : " + localStorage.getItem('Mt' + i));
+		i += 1;
 	}
+}
+
+function printScore(){
+	var canvas = document.getElementById("gc");
+	var i = 0;
+	while(localStorage.getItem('Mt' + i) != null){
+		var score = document.createElement("p");
+		var blcok = document.createElement("p");
+		var bouns = document.createElement("p");
+		var breakable = document.createElement("p");
+		
+		score.innerHTML = "Score : " + localStorage.getItem('MtBl' + i);
+		blcok.innerHTML = "Block Avoided: " + localStorage.getItem('Mt' + i) + "(" + (localStorage.getItem('MtBlS' + i) / localStorage.getItem('MtBl' + i))	+ ")";
+		canvas.appendChild(score);
+		canvas.appendChild(blcok);
+		
+		i += 1;
+	}
+	
+	
+	
 }

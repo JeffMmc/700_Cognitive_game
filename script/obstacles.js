@@ -2,22 +2,18 @@ function generateObstacle(){
 	var tracks = document.getElementsByClassName("track");
 	var blockExist = false;
 	
-	for(var i = 0; i < tracks.length; i++){
-		if(i%2 == 0){
-			blockExist = false;
-		}
+	for(var i = 0; i < 2; i++){
+
 		var obstacleTypeNum = Math.floor(Math.random() * 3);
-		if(blockExist && obstacleTypeNum == 0){
-			obstacleTypeNum  = 2;
-		}
+
 		var obs = obstacle(obstacleType[obstacleTypeNum]);
 
-		tracks[i].appendChild(obs);
+		tracks[Math.floor(Math.random() * 2) + i * 2].appendChild(obs);
 		
 		switch (obstacleTypeNum) {
 			//Action of block
 			case 0:
-			blockExist = true;
+
 			obs.onclick = function(){
 				//No Action
 			};

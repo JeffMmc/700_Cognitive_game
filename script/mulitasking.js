@@ -10,7 +10,7 @@ window.onload = function(){
     console.log("Ready");
     //clear session storage;
     window.sessionStorage.clear();
-	countdown = 3;
+	countdown = 60;
 	statrGame();
 	updateScore(0);
 	updateSpeedText();
@@ -88,7 +88,7 @@ function updateTimer(){
 }
 
 function endMultitaskingGame(){
-	recordMultaskingScore(score)
+	recordMultaskingScore(score);
 	clearInterval(generateInterval);
 	clearInterval(moveInterval);
 	clearInterval(scoreInterval);
@@ -101,9 +101,10 @@ function endMultitaskingGame(){
 	console.log("Success : " + bonusSuccess);
 	console.log("Breakable : " +  breakable);
 	console.log("Success : " +  breakableSuccess);
-	
+	printRecord();
 	for (var key in localStorage){
-		console.log(key);
+		//console.log(key);
 		//localStorage.removeItem(key);
 	}
+	window.location.replace("multaskingResult.html");
 }

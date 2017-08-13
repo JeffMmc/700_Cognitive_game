@@ -19,21 +19,21 @@ function generateObstacle(){
 			case 0:
 			blockExist = true;
 			obs.onclick = function(){
-				//No 
+				//No Action
 			};
 			break;
 			
 			//Action of bonus
 			case 1:
 			obs.onclick = function(){
-				destroyObstacle(this)
-				bonusScore(10);
 			};
 			break;
 			
 			//Action of breakable
 			case 2:
 			obs.onclick = function(){
+				breakable += 1;
+				breakableSuccess += 1;
 				destroyObstacle(this);
 			};
 			break;
@@ -65,6 +65,10 @@ function obstacleMove(){
 		
 		//Destroy the obstacle when it leave the track
 		if(obstacle[i].posY > 420){
+			if(obstacle[i].className=="block obstacle"){
+				block += 1;
+				blockSuccess += 1;
+			}
 			destroyObstacle(obstacle[i]);
 		}//Deal with collision
 		else if(obstacle[i].posY > 310){
@@ -74,7 +78,14 @@ function obstacleMove(){
 					if(obstacle[i].className=="bonus obstacle"){
 						destroyObstacle(obstacle[i]);
 						bonusScore(5);
+						bonus += 1;
+						bonusSuccess += 1;
+					}else if(obstacle[i].className=="breakable obstacle"){
+						breakable += 1;
+						collision = true;
+						destroyObstacle(obstacle[i]);
 					}else{
+						block += 1;
 						collision = true;
 						destroyObstacle(obstacle[i]);
 					}

@@ -1,3 +1,5 @@
+var scoreSE = new Sound("../src/score.mp3");
+
 function generateObstacle(){
 	var tracks = document.getElementsByClassName("track");
 	var blockExist = false;
@@ -31,6 +33,7 @@ function generateObstacle(){
 				breakable += 1;
 				breakableSuccess += 1;
 				destroyObstacle(this);
+				new Audio('src/score.mp3').play();
 			};
 			break;
 		}
@@ -64,6 +67,7 @@ function obstacleMove(){
 			if(obstacle[i].className=="block obstacle"){
 				block += 1;
 				blockSuccess += 1;
+				new Audio('src/score.mp3').play();
 			}
 			destroyObstacle(obstacle[i]);
 		}//Deal with collision
@@ -76,6 +80,7 @@ function obstacleMove(){
 						bonusScore(5);
 						bonus += 1;
 						bonusSuccess += 1;
+						new Audio('src/score.mp3').play();
 					}else if(obstacle[i].className=="breakable obstacle"){
 						breakable += 1;
 						collision = true;

@@ -14,6 +14,7 @@ window.onload = function(){
 	statrGame();
 	updateScore(0);
 	updateSpeedText();
+	
 }
 
 function statrGame(){
@@ -30,7 +31,7 @@ function statrGame(){
 	generateInterval = setInterval(generateObstacle, 5000);
 	moveInterval = setInterval(obstacleMove, 1000/30);
 	scoreInterval = setInterval(updateScore, 1000);
-	speedInterval = setInterval(updateSpeed, 5000);
+	speedInterval = setInterval(updateSpeed, 10000);
 	timerInterval = setInterval(updateTimer, 1000);
 }
 

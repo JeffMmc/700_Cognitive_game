@@ -3,6 +3,10 @@ var scorebar, data, menu;
 
 window.onload = function(){
     initResult();
+	for (var key in localStorage){
+		console.log(key);
+		//localStorage.removeItem(key);
+	}
 }
 
 function initResult(){

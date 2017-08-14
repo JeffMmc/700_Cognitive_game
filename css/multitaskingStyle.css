@@ -1,7 +1,10 @@
 .scorebar{
 	width: 800px;
-	height: 80px;
+	height: 60px;
 	float: left;
+	margin-top: 5px;
+	background-color:#FFEC85;
+	border-radius: 20px;
 }
 
 .scorebar p{
@@ -13,18 +16,21 @@
 	width: 400px;
 	height: 400px;
 	float: left;
+	
 }
 
 .track {
 	position: relative;
 	width: 100px;
 	height: 380px;
+	margin-top: 15px;
 	margin-left: 12.5%;
 	float:left;
 	border-top-style: solid;
 	border-right-style: solid;
 	border-bottom-style: solid;
 	border-left-style: solid;
+	background-color:#F2FFDF;
 }
 
 .vehicle{
@@ -65,23 +71,33 @@
 }
 
 #result_score{
-	width: 800px;
-	height: 100px;
+	width: 795px;
+	height: 90px;
 	float: left;
 	text-align: center;
+	background-color:#FFEC85;
+	margin-top: 5px;
+	border-radius: 20px;
+	border-color: #F2FFDF;
+	border-style: solid;
 }
 
 #result_data{
-	width: 400px;
+	width: 395px;
 	height: 280px;
 	position: absolute;
-	top:110px;
+	top:112px;
 	left:200px;
 	float: left;
+	background-color:#F2FFDF;
+	border-radius: 20px;
+	border-color: #FFCA61;
+	border-style: solid;
 }
 
 #result_data p{
 	line-height:60px;
+	margin-left: 20px;
 }
 
 #result_menu{
@@ -93,8 +109,22 @@
 	text-align: center;
 }
 
+#result_menu p{
+	
+}
+
 #result_menu button{
-	margin-top:40px;
-	margin-left:100px;
-	margin-right:100px;
+	margin-top:25px;
+	margin-left:80px;
+	margin-right:80px;
+	height:54px;
+	width: 96px;
+	border-style: solid;
+	border-color:#FFCA61;
+	background-color: #FFEC85;
+	border-radius: 10px;
+}
+
+#result_menu button:hover{
+	background-color: #FFCA61;
 }

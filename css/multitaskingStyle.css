@@ -28,12 +28,19 @@
 }
 
 .vehicle{
-	background-color: #03F;
-	height: 100px;
-	width: 80px;
+	height: 150px;
+	width: 150px;
 	position: absolute;
 	bottom: 10px;
 	left: 10px;
+}
+
+.vehicleRender{
+	background-color: #03F;
+	height: 100px;
+	width: 80px;
+	position: relative;
+	top: 50px;
 }
 
 .block {

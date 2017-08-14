@@ -12,6 +12,7 @@ function initResult(){
 	menu = document.getElementById("result_menu");
 	var i = 0;
 	while(localStorage.getItem('Mt' + i) != null){
+		console.log(i);
 		var score = document.createElement("h1");
 		var blcok = document.createElement("p");
 		var bonus = document.createElement("p");

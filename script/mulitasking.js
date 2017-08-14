@@ -104,7 +104,7 @@ function endMultitaskingGame(){
 	console.log("Success : " +  breakableSuccess);
 	printRecord();
 	for (var key in localStorage){
-		//console.log(key);
+		console.log(key);
 		//localStorage.removeItem(key);
 	}
 	window.location.replace("multaskingResult.html");

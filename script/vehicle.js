@@ -3,6 +3,10 @@ function vehicle(){
 	vehicle.classList.add("vehicle");
 	vehicle.position = "left";
 	
+	var vehicleRender = document.createElement("div");
+	vehicleRender.classList.add("vehicleRender");
+	vehicle.appendChild(vehicleRender);
+	
 	swipedetect(vehicle, function(swipedir){
 		console.log(swipedir);
 		vehicleMove(vehicle, swipedir);

@@ -1,15 +1,43 @@
 .menuLink{
 	width: 380px;
-	height: 380px;
-	margin-right:5px;
-	margin-left:5px;
+	height: 360px;
+	margin-right:10px;
+	margin-left:10px;
 	float: left;
 	text-align: center;
-	border-style: solid;
+	background-color: #FFEC85;
+	border-radius: 50px;
 }
 
 .menuLink h1{
-	line-height: 300px;
+	line-height: 280px;
+}
+
+.menuLink a{
+	color: #000000;
+	font-style: normal;
+	text-decoration: none;
+}
+
+.menuLink:hover{
+	background-color: #FFCA61;
+}
+
+.menuLink:hover h1{
+	font-style: normal;
+	text-decoration: none;
+}
+
+.menuLink:hover a{
+	color: #FFFFFF;
+	font-style: normal;
+	text-decoration: none;
+}
+
+.menuLink:hover a{
+	font-color: #FFFFFF;
+	font-style: normal;
+	text-decoration: none;
 }
 
 #title{

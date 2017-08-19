@@ -124,3 +124,14 @@
 #result_menu button:hover{
 	background-color: #FFCA61;
 }
+
+.moveButton{
+	width:39px;
+	height:31px;
+	
+	background-color:transparent;
+	border:none;
+	position: relative;
+	top:320px;
+	right:147px
+}

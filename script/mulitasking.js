@@ -52,7 +52,9 @@ function field(fieldNum){
 	var field = document.createElement("div");
 	field.classList.add("field");
 	field.tracks = new Array(2);
+	field.style.backgroundImage = "url('src/grass.png')";
 	
+	//Generate track
 	for(var j = 0; j < 2; j++){
 		var trackElement = document.createElement("div");
 		trackElement.classList.add("track");
@@ -68,7 +70,29 @@ function field(fieldNum){
 		field.appendChild(trackElement);
 		
 	}
-	field.style.backgroundImage = "url('src/grass.png')";
+	
+	//Generate button
+	var moveButton = document.createElement("button");
+	moveButton.classList.add("moveButton");
+	moveButton.style.backgroundImage = "url('src/sliderRight.png')";
+	moveButton.vehicle = vehicleElement;
+	vehicleElement.moveButton = moveButton;
+	moveButton.onclick = function(){
+		if(moveButton.vehicle.position == "left"){
+			moveButton.vehicle.parentNode.removeChild(moveButton.vehicle);
+			fields[moveButton.vehicle.fieldNum].tracks[1].appendChild(moveButton.vehicle);
+			moveButton.vehicle.position = "right";
+			moveButton.style.backgroundImage = "url('src/sliderLeft.png')";
+		}else if(moveButton.vehicle.position == "right"){
+			moveButton.vehicle.parentNode.removeChild(moveButton.vehicle);
+			fields[moveButton.vehicle.fieldNum].tracks[0].appendChild(moveButton.vehicle);
+			moveButton.vehicle.position = "left";
+			moveButton.style.backgroundImage = "url('src/sliderRight.png')";
+		}
+	}
+	field.appendChild(moveButton);
+	
+	
 	return field;
 }
 

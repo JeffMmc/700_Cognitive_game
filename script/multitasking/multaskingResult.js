@@ -5,7 +5,7 @@ window.onload = function(){
     initResult();
 	for (var key in localStorage){
 		console.log(key + " : " + localStorage.getItem(key));
-		localStorage.removeItem(key);
+		//localStorage.removeItem(key);
 	}
 }
 

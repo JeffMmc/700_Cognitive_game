@@ -33,8 +33,14 @@ function generateObstacle(){
 			obs.onclick = function(){
 				breakable += 1;
 				breakableSuccess += 1;
-				destroyObstacle(this);
+				this.classList = "breakablesub";
+				var b = this;
 				scoreSE.play();
+				setTimeout(function(){
+					destroyObstacle(b);
+				}, 1000);
+				
+				
 			};
 			break;
 		}

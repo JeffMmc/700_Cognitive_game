@@ -48,21 +48,36 @@
 .block {
 	height: 60px;
 	width: 100px;
-	background-color: red;
+	background-image: url("../src/rock.png");
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
 	position: absolute;
 }
 
 .bonus{
 	height: 60px;
 	width: 100px;
-	background-color: green;
+	background-image: url("../src/gem.png");
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
 	position: absolute;
 }
 
 .breakable {
 	height: 60px;
 	width: 100px;
-	background-color: yellow;
+	background-image: url("../src/chest_closed.png");
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+	position: absolute;
+}
+
+.breakablesub {
+	height: 60px;
+	width: 100px;
+	background-image: url("../src/chest_open.png");
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
 	position: absolute;
 }
 

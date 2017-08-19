@@ -5,6 +5,7 @@ function vehicle(){
 	
 	var vehicleRender = document.createElement("div");
 	vehicleRender.classList.add("vehicleRender");
+	vehicleRender.style.backgroundImage = "url('src/vehicle_05.png')";
 	vehicle.appendChild(vehicleRender);
 	
 	swipedetect(vehicle, function(swipedir){

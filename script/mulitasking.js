@@ -3,7 +3,7 @@ var vehicleElement;
 var countdown;
 var obstacleType = ["block", "bonus", "breakable"];
 var fields = new Array(2);
-var generateInterval, moveInterval, scoreInterval, speedInterval,timerInterval;
+var generateInterval, moveInterval, scoreInterval, speedInterval,timerInterval,roadMovingInterval;
 
 
 window.onload = function(){
@@ -27,12 +27,7 @@ function statrGame(){
 		canvas.appendChild(fields[i]);
 	}
 	generateObstacle();
-	
-	generateInterval = setInterval(generateObstacle, 5000);
-	moveInterval = setInterval(obstacleMove, 1000/30);
-	scoreInterval = setInterval(updateScore, 1000);
-	speedInterval = setInterval(updateSpeed, 10000);
-	timerInterval = setInterval(updateTimer, 1000);
+	resumeInterval();
 }
 
 function scorebar(){
@@ -67,10 +62,13 @@ function field(fieldNum){
 			vehicleElement.fieldNum = fieldNum;
 			trackElement.appendChild(vehicleElement);
 		}
+		trackElement.style.backgroundImage = "url('src/road.png')";
+		trackElement.style.backgroundPosition = "0px 100px";
+		trackElement.yPos = 0;
 		field.appendChild(trackElement);
 		
 	}
-	
+	field.style.backgroundImage = "url('src/grass.png')";
 	return field;
 }
 
@@ -85,23 +83,54 @@ function updateTimer(){
 	}else{
 		endMultitaskingGame();
 	}
-	
 }
 
-function endMultitaskingGame(){
-	recordMultaskingScore(score);
+function pauseInterval(){
 	clearInterval(generateInterval);
 	clearInterval(moveInterval);
 	clearInterval(scoreInterval);
 	clearInterval(speedInterval);
 	clearInterval(timerInterval);
+	clearInterval(roadMovingInterval);
+}
+
+function resumeInterval() {
+	generateInterval = setInterval(generateObstacle, 5000);
+	moveInterval = setInterval(obstacleMove, 1000/30);
+	scoreInterval = setInterval(updateScore, 1000);
+	speedInterval = setInterval(updateSpeed, 10000);
+	timerInterval = setInterval(updateTimer, 1000);
+	roadMovingInterval = setInterval(roadMoving, 1000/30);
+}
+
+function roadMoving(){
+	for(var i = 0; i < 2 ; i++){
+		for(var j = 0; j < 2; j++){
+			if(fields[i].tracks[j].yPos <= 400){
+				fields[i].tracks[j].yPos += overallSpeed;
+			}else{
+				fields[i].tracks[j].yPos = 0;
+			}
+			
+			fields[i].tracks[j].style.backgroundPosition = "0px " + fields[i].tracks[j].yPos +"px";
+		}
+	}
+}
+
+function endMultitaskingGame(){
+	recordMultaskingScore(score);
+	pauseInterval();
 	document.getElementById("gc").innerHTML = "";
-	console.log("Block : " + block);
-	console.log("Success : " + blockSuccess);
-	console.log("Bonus : " + bonus);
-	console.log("Success : " + bonusSuccess);
-	console.log("Breakable : " +  breakable);
-	console.log("Success : " +  breakableSuccess);
+	
+	localStorage.setItem('currentScore', score);
+	localStorage.setItem('currentBl', block);
+	localStorage.setItem('currentBlS', blockSuccess);
+	localStorage.setItem('currentBo', bonus);
+	localStorage.setItem('currentBoS', bonusSuccess);
+	localStorage.setItem('currentBr', breakable);
+	localStorage.setItem('currentBrS', breakableSuccess);
+
+	
 	printRecord();
 	for (var key in localStorage){
 		console.log(key);

@@ -1,23 +1,25 @@
 function recordMultaskingScore(){
 	var logDate = dateFormating();
-	var recorded = false;
-	
+	console.log("lastMt : " + localStorage.lastMultitasking);
 	if(localStorage.lastMultitasking == null){
 		//First score of all time
+		console.log("First score of all time");
 		persistScore(0);
 	}else if(localStorage.lastMultitasking == logDate){
 		//New score of the day
+		console.log("New score of the day");
 		localStorage.setItem('lastMultitasking', logDate);
 		var highscore;
 		
 		var recorded = false;
 		var i = 0;
 		while(!recorded){
+			console.log(i);
 			if(localStorage.getItem('Mt' + i) == null){
 				highscore = localStorage.getItem('Mt' + (i-1));
 				//New High score
 				if(score > highscore){
-					persistScore(i - 1);
+					persistScore(i);
 				}
 				recorded = true;
 			}
@@ -26,17 +28,14 @@ function recordMultaskingScore(){
 		
 	}else{
 		//First score of the day
+		console.log("First score of the day");
 		localStorage.setItem('lastMultitasking', logDate);
 		
 		var recorded = false;
 		var i = 0;
 		while(!recorded){
 			if(localStorage.getItem('Mt' + i) == null){
-				highscore = localStorage.getItem('Mt' + (i-1));
-				//New High score
-				if(score > highscore){
-					persistScore(i - 1);
-				}
+				persistScore(i);
 				recorded = true;
 			}
 			i += 1;
@@ -55,7 +54,7 @@ function addNewScore(){
 
 //Store score into localStorage
 function persistScore(scoreIndex){
-		localStorage.setItem(['Mt' + scoreIndex], score);
+		localStorage.setItem('Mt' + scoreIndex, score);
 		localStorage.setItem('MtBl' + scoreIndex, block);
 		localStorage.setItem('MtBlS' + scoreIndex, blockSuccess);
 		localStorage.setItem('MtBo' + scoreIndex, bonus);
@@ -89,25 +88,4 @@ function printRecord(){
 		console.log(i + " : " + localStorage.getItem('Mt' + i));
 		i += 1;
 	}
-}
-
-function printScore(){
-	var canvas = document.getElementById("gc");
-	var i = 0;
-	while(localStorage.getItem('Mt' + i) != null){
-		var score = document.createElement("p");
-		var blcok = document.createElement("p");
-		var bouns = document.createElement("p");
-		var breakable = document.createElement("p");
-		
-		score.innerHTML = "Score : " + localStorage.getItem('MtBl' + i);
-		blcok.innerHTML = "Block Avoided: " + localStorage.getItem('Mt' + i) + "(" + (localStorage.getItem('MtBlS' + i) / localStorage.getItem('MtBl' + i))	+ ")";
-		canvas.appendChild(score);
-		canvas.appendChild(blcok);
-		
-		i += 1;
-	}
-	
-	
-	
 }

@@ -4,8 +4,8 @@ var scorebar, data, menu;
 window.onload = function(){
     initResult();
 	for (var key in localStorage){
-		console.log(key);
-		//localStorage.removeItem(key);
+		console.log(key + " : " + localStorage.getItem(key));
+		localStorage.removeItem(key);
 	}
 }
 
@@ -16,7 +16,6 @@ function initResult(){
 	menu = document.getElementById("result_menu");
 	var i = 0;
 	while(localStorage.getItem('Mt' + i) != null){
-		console.log(i);
 		var score = document.createElement("h1");
 		var blcok = document.createElement("p");
 		var bonus = document.createElement("p");
@@ -35,6 +34,7 @@ function initResult(){
 		data.appendChild(breakable);
 		
 		i += 1;
+		break;
 	}
 	
 	var backButton = document.createElement("button");
@@ -51,4 +51,11 @@ function initResult(){
 	
 	menu.appendChild(backButton);
 	menu.appendChild(replayButton);
+	
+	console.log("Block : " + localStorage.getItem('currentBl'));
+	console.log("Success : " + localStorage.currentBlS);
+	console.log("Bonus : " + localStorage.currentBo);
+	console.log("Success : " + localStorage.currentBoS);
+	console.log("Breakable : " +  localStorage.currentBr);
+	console.log("Success : " +  localStorage.currentBrS);
 }

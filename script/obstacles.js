@@ -24,6 +24,7 @@ function generateObstacle(){
 			//Action of bonus
 			case 1:
 			obs.onclick = function(){
+				//No Action
 			};
 			break;
 			
@@ -63,7 +64,7 @@ function obstacleMove(){
 		obstacle[i].style.top = obstacle[i].posY + 'px';
 		
 		//Destroy the obstacle when it leave the track
-		if(obstacle[i].posY > 320){
+		if(obstacle[i].posY > 340){
 			if(obstacle[i].className=="block obstacle"){
 				block += 1;
 				blockSuccess += 1;
@@ -73,7 +74,7 @@ function obstacleMove(){
 			}
 			destroyObstacle(obstacle[i]);
 		}//Deal with collision
-		else if(obstacle[i].posY > 210){
+		else if(obstacle[i].posY > 230){
 			var childOfTrack = obstacle[i].parentNode.children;
 			for(var j = 0; j < childOfTrack.length; j++){
 				if(childOfTrack[j].className == "vehicle"){

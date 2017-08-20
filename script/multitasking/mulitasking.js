@@ -11,11 +11,11 @@ window.onload = function(){
     console.log("Ready");
     //clear session storage;
     window.sessionStorage.clear();
-	countdown = 5;
+	countdown = 60;
 	statrGame();
 	updateScore(0);
 	updateSpeedText();
-	bgm.play();
+	//bgm.play();
 }
 
 function statrGame(){

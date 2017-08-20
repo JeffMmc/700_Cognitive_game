@@ -1,0 +1,15 @@
+#data{
+	width: 750px;
+	height: 450px;
+	border-style: solid;
+	overflow-y: scroll;
+}
+
+#data p{
+	margin-left: 10px;
+}
+
+#line_chart{
+	width: 700px;
+	height: 200px;
+}

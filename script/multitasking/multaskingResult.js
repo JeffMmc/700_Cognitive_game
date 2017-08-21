@@ -24,15 +24,50 @@ function initResult(){
 	var bonusRate = (localStorage.getItem('currentBoS') / localStorage.getItem('currentBo')) * 100;
 	var breakableRate = (localStorage.getItem('currentBrS') / localStorage.getItem('currentBr')) * 100;
 	
-	score.innerHTML = "Score : " + localStorage.getItem('currentScore');
-	blcok.innerHTML = "Block Avoided: " + localStorage.getItem('currentBl') + "(" + blockRate.toFixed(2) + "%)";
-	bonus.innerHTML = "Bonus gained: " + localStorage.getItem('currentBo') + "(" + bonusRate.toFixed(2) + "%)";
-	breakable.innerHTML = "Breakable broke: " + localStorage.getItem('currentBr') + "(" + breakableRate.toFixed(2) + "%)";
+	//Get data of last play
+	var i = 0;
+	while(localStorage.getItem('Mt' + i) != null){
+		i += 1;
+	}
+	if(i > 0){
+		i -=1;
+	}
+	var lastScore = localStorage.getItem('Mt' + i);
+	var lastblockRate = (localStorage.getItem('MtBlS' + i) / localStorage.getItem('MtBl' + i)) * 100;
+	var lastbonusRate = (localStorage.getItem('MtBoS' + i) / localStorage.getItem('MtBoS' + i)) * 100;
+	var lastbreakableRate = (localStorage.getItem('MtBrS' + i) / localStorage.getItem('MtBr' + i)) * 100;
+	
+	//Comment on performance
+	if(lastScore / localStorage.getItem('currentScore') > 1.2){
+		score.innerHTML = "You have very good improvement than yesterday";
+	}else if (lastScore / localStorage.getItem('currentScore') > 1.0){
+		score.innerHTML = "You have good improvement than yesterday";
+	}else{
+		score.innerHTML = "You have similar performance as yesterday";
+	}
 	scorebar.appendChild(score);
+	
+	/*if(blockRate > lastblockRate){
+		blcok.innerHTML = "Rock avoid rate improved";
+		data.appendChild(blcok);
+	}
+	
+	if(bonusRate > lastbonusRate){
+		bonus.innerHTML = "Gem collect rate improved";
+		data.appendChild(bonus);
+	}
+	
+	if(bonusRate > lastbonusRate){
+		breakable.innerHTML = "Chest open rate improved";
+		data.appendChild(breakable);
+	}*/
+	
+	blcok.innerHTML = "Rock avoid rate improved";
 	data.appendChild(blcok);
+	bonus.innerHTML = "Gem collect rate improved";
 	data.appendChild(bonus);
+	breakable.innerHTML = "Chest open rate improved";
 	data.appendChild(breakable);
-		
 
 	
 	var backButton = document.createElement("button");

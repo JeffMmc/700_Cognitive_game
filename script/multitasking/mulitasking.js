@@ -1,6 +1,6 @@
 var canvas;
 var vehicleElement;
-var countdown;
+var countdown, pauseMenu;
 var obstacleType = ["block", "bonus", "breakable"];
 var fields = new Array(2);
 var generateInterval, moveInterval, scoreInterval, speedInterval,timerInterval,roadMovingInterval;

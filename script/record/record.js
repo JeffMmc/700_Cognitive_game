@@ -42,6 +42,18 @@ function initResult(){
 		chartData[i] = ["Day" + i,  parseInt(localStorage.getItem('Mt' + (i-1)))];
 	}
 	
+	var startIndex;
+	if(i > 19){
+		chartDataNum = i+1;
+	}else{
+		startIndex = 1;
+	}
+	
+	for(var j = startIndex; j < i; j++){
+		chartData[j] = ["Day" + j,  parseInt(localStorage.getItem('Mt' + (j-1)))];
+		console.log(chartData[j]);
+	}
+	
 	var backButton = document.createElement("button");
 	backButton.innerHTML = "Back";
 	backButton.onclick = function(){

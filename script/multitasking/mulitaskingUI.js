@@ -1,3 +1,5 @@
+var gamePause;
+
 //Generate top score bar
 function scorebar(){
 	var scorebar = document.createElement("div");
@@ -11,16 +13,18 @@ function scorebar(){
 	countdownTimer.id = "countdownTimer";
 	var menuButton = document.createElement("button");
 	menuButton.id = "menuButton";
-	menuButton.pause = false;
+	gamePause = false;
+	pauseMenu = pauseMenu();
 	menuButton.onclick = function(){
-		if(menuButton.pause){
+		if(gamePause){
 			resumeInterval();
-			menuButton.pause = false;
+			gamePause = false;
+			canvas.removeChild(pauseMenu);
 		}else{
 			pauseInterval();
-			menuButton.pause = true;
+			gamePause = true;
+			canvas.insertBefore(pauseMenu, canvas.firstChild);
 		}
-		
 		console.log("pause");
 	}
 	
@@ -92,4 +96,35 @@ function roadMoving(){
 			fields[i].tracks[j].style.backgroundPosition = "0px " + fields[i].tracks[j].yPos +"px";
 		}
 	}
+}
+
+function pauseMenu(){
+	var pauseM = document.createElement("div");
+	pauseM.id = "pause_menu";
+	
+	var pauseText = document.createElement("h1");
+	pauseText.innerHTML = "Pause";
+	
+	var resumeButton = document.createElement("button");
+	resumeButton.innerHTML = "Resume";
+	resumeButton.id = "resume_button";
+	resumeButton.onclick = function(){
+		resumeInterval();
+		gamePause = false;
+		canvas.removeChild(pauseMenu);
+	}
+	
+	var backButton = document.createElement("button");
+	backButton.innerHTML = "Menu";
+	backButton.id = "back_button";
+	backButton.onclick = function(){
+		resumeInterval();
+		window.location.replace("index.html");
+	}
+	
+	pauseM.appendChild(pauseText);
+	pauseM.appendChild(resumeButton);
+	pauseM.appendChild(backButton);
+	
+	return pauseM;
 }

@@ -198,3 +198,49 @@
 	background-color: #FFCA61;
 }
 
+#pause_menu{
+	width:780px;
+	height:390px;
+	background-color:#F2FFDF;
+	position: fixed;
+	top: 97px;
+	left:17px;
+	z-index : 1;
+	border-radius: 50px;
+}
+
+#pause_menu h1{
+	font-family: Impact, Charcoal, sans-serif;
+	color:white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-size: 50px;
+	position:relative;
+	left: 330px;
+}
+
+#pause_menu button{
+	height:80px;
+	width: 200px;
+	border-style: solid;
+	border-color:#FFCA61;
+	background-color: #FFEC85;
+	border-radius: 10px;
+	font-size: 25px;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+#pause_menu button:hover{
+	background-color: #FFCA61;
+}
+
+#resume_button{
+	position:fixed;
+	top: 220px;
+	left:310px;
+}
+
+#back_button{
+	position:fixed;
+	top: 350px;
+	left:310px;
+}

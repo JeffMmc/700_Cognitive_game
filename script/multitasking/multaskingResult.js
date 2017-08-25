@@ -29,38 +29,53 @@ function initResult(){
 	while(localStorage.getItem('Mt' + i) != null){
 		i += 1;
 	}
-	if(i > 0){
-		i -=1;
+	if(i == 1){
+		i = 0;
+	}else{
+		i -= 2;
 	}
+
 	var lastScore = localStorage.getItem('Mt' + i);
 	var lastblockRate = (localStorage.getItem('MtBlS' + i) / localStorage.getItem('MtBl' + i)) * 100;
 	var lastbonusRate = (localStorage.getItem('MtBoS' + i) / localStorage.getItem('MtBoS' + i)) * 100;
 	var lastbreakableRate = (localStorage.getItem('MtBrS' + i) / localStorage.getItem('MtBr' + i)) * 100;
-	
+	console.log("a + " + localStorage.getItem('currentScore') / lastScore);
 	//Comment on performance
-	if(lastScore / localStorage.getItem('currentScore') > 1.2){
-		score.innerHTML = "You have very good improvement than yesterday";
-	}else if (lastScore / localStorage.getItem('currentScore') > 1.0){
-		score.innerHTML = "You have good improvement than yesterday";
+	if(i == 0){
+        score.innerHTML = "Good Job For The First Day.";
+	}
+	else if(localStorage.getItem('currentScore') / lastScore > 1.2){
+		score.innerHTML = (lastScore / localStorage.getItem('currentScore') * 100).toFixed(2) + "% improvement. Amazing";
+	}else if (localStorage.getItem('currentScore') / lastScore > 1.0){
+		score.innerHTML = (lastScore / localStorage.getItem('currentScore') * 100).toFixed(2) + "% improvement. Good Job";
 	}else{
-		score.innerHTML = "You have similar performance as yesterday";
+		score.innerHTML = "Good Job";
 	}
 	scorebar.appendChild(score);
-	
-	/*if(blockRate > lastblockRate){
+
+	var improvement = false;
+	if(blockRate > lastblockRate){
 		blcok.innerHTML = "Rock avoid rate improved";
 		data.appendChild(blcok);
+        improvement = true;
 	}
 	
 	if(bonusRate > lastbonusRate){
 		bonus.innerHTML = "Gem collect rate improved";
 		data.appendChild(bonus);
+        improvement = true;
 	}
 	
 	if(bonusRate > lastbonusRate){
 		breakable.innerHTML = "Chest open rate improved";
 		data.appendChild(breakable);
-	}*/
+        improvement = true;
+	}
+
+	if(!improvement){
+        blcok.innerHTML = "Average performance";
+        data.appendChild(blcok);
+	}
 	
 	blcok.innerHTML = "Rock avoid rate improved";
 	data.appendChild(blcok);

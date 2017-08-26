@@ -244,3 +244,8 @@
 	top: 350px;
 	left:310px;
 }
+
+#tutorialText{
+	position:relative;
+	top: -10px;
+}

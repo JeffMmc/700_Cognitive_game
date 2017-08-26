@@ -1,11 +1,3 @@
-var score = 0;
-var block = 0, bonus = 0, breakable = 0;
-var blockSuccess = 0, bonusSuccess = 0, breakableSuccess = 0; 
-var scoreText;
-var speedText;
-var collision = false;
-var overallSpeed = 3;
-
 function updateScore(){
 	scoreText = document.getElementById("score");
 	score += overallSpeed;

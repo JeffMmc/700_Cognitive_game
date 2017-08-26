@@ -1,50 +1,48 @@
-var scoreSE = new Audio('src/score.mp3');
-
 function generateObstacle(){
 	var tracks = document.getElementsByClassName("track");
 	var blockExist = false;
-	
-	for(var i = 0; i < 2; i++){
 
-		var obstacleTypeNum = Math.floor(Math.random() * 3);
+    for(var i = 0; i < 2; i++){
 
-		var obs = obstacle(obstacleType[obstacleTypeNum]);
+        var obstacleTypeNum = Math.floor(Math.random() * 3);
 
-		tracks[Math.floor(Math.random() * 2) + i * 2].appendChild(obs);
-		
-		switch (obstacleTypeNum) {
-			//Action of block
-			case 0:
+        var obs = obstacle(obstacleType[obstacleTypeNum]);
 
-			obs.onclick = function(){
-				//No Action
-			};
-			break;
-			
-			//Action of bonus
-			case 1:
-			obs.onclick = function(){
-				//No Action
-			};
-			break;
-			
-			//Action of breakable
-			case 2:
-			obs.onclick = function(){
-				breakable += 1;
-				breakableSuccess += 1;
-				this.classList = "breakablesub";
-				var b = this;
-				scoreSE.play();
-				setTimeout(function(){
-					destroyObstacle(b);
-				}, 1000);
-				
-				
-			};
-			break;
-		}
-	}
+        tracks[Math.floor(Math.random() * 2) + i * 2].appendChild(obs);
+
+        switch (obstacleTypeNum) {
+            //Action of block
+            case 0:
+
+                obs.onclick = function(){
+                    //No Action
+                };
+                break;
+
+            //Action of bonus
+            case 1:
+                obs.onclick = function(){
+                    //No Action
+                };
+                break;
+
+            //Action of breakable
+            case 2:
+                obs.onclick = function(){
+                    breakable += 1;
+                    breakableSuccess += 1;
+                    this.classList = "breakablesub";
+                    var b = this;
+                    scoreSE.play();
+                    setTimeout(function(){
+                        destroyObstacle(b);
+                    }, 1000);
+
+
+                };
+                break;
+        }
+    }
 }
 
 //Create an obstacle object
@@ -86,7 +84,6 @@ function obstacleMove(){
 				if(childOfTrack[j].className == "vehicle"){
 					if(obstacle[i].className=="bonus obstacle"){
 						destroyObstacle(obstacle[i]);
-						bonusScore(5);
 						bonus += 1;
 						bonusSuccess += 1;
 						scoreSE.play();

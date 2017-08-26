@@ -1,5 +1,3 @@
-var gamePause;
-
 //Generate top score bar
 function scorebar(){
 	var scorebar = document.createElement("div");
@@ -85,7 +83,8 @@ function field(fieldNum){
 }
 
 function roadMoving(){
-	for(var i = 0; i < 2 ; i++){
+
+	for(var i = 0; i < fields.length ; i++){
 		for(var j = 0; j < 2; j++){
 			if(fields[i].tracks[j].yPos <= 400){
 				fields[i].tracks[j].yPos += overallSpeed;

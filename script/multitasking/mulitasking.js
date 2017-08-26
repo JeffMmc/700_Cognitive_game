@@ -1,12 +1,3 @@
-var canvas;
-var vehicleElement;
-var countdown, pauseMenu;
-var obstacleType = ["block", "bonus", "breakable"];
-var fields = new Array(2);
-var generateInterval, moveInterval, scoreInterval, speedInterval,timerInterval,roadMovingInterval;
-var bgm = new Audio('src/mt_bgm.mp3');
-
-
 window.onload = function(){
     console.log("Ready");
     //clear session storage;

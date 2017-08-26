@@ -2,7 +2,7 @@ window.onload = function(){
     console.log("Ready");
     //clear session storage;
     window.sessionStorage.clear();
-	countdown = 60;
+	countdown = 180;
 	statrGame();
 	updateScore(0);
 	updateSpeedText();

@@ -75,20 +75,8 @@ function initResult(){
 	console.log("Success : " +  localStorage.currentBrS);
 }
 
-function lineChart(){
-	
-}
-
 function drawChart(){
-	var a  = [
-	  ['Year', 'Sales'],
-	  ['2004',  1000],
-	  ['2005',  1170],
-	  ['2006',  660],
-	  ['2007',  1030]
-	]
-	
-	a[5] = ['2008',  1030];
+
 	var data = google.visualization.arrayToDataTable(chartData);
 
 	var options = {

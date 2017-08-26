@@ -23,6 +23,11 @@ function startTutorial(){
     fields[0].style.top = "-6px";
     fields[0].style.left = "200px";
 
+    if(!(localStorage.getItem("passTutorial") === null)){
+        canvas.appendChild(skipButton());
+    }
+
+
 }
 
 function pauseInterval(){
@@ -105,43 +110,43 @@ function tutorialScoreBar(){
 function tutorialFlow(){
     console.log(tutorialStart);
     if(tutorialStart){
-        if(blockSuccess > 2 && bonusSuccess > 2 && breakableSuccess > 2){
+        if(blockSuccess > 1 && bonusSuccess > 1 && breakableSuccess > 1){
             if(stage == 3){
                 clearInterval(stage3);
                 tutorialStart = false;
                 stage = 0;
-
+                localStorage.setItem("passTutorial", true);
             }
 
-        }else if(blockSuccess > 2 && bonusSuccess > 2) {
+        }else if(blockSuccess > 1 && bonusSuccess > 1) {
             if(stage == 2){
                 clearInterval(stage2);
                 tutorialStart = false;
                 stage = 3;
-                new Audio('src/speedup.mp3').play();
             }
 
-        }else if(blockSuccess > 2){
+        }else if(blockSuccess > 1){
             if(stage == 1){
                 clearInterval(stage1);
                 tutorialStart = false;
                 stage = 2;
-
             }
 
         }
     }else{
-        if(blockSuccess > 2 && bonusSuccess > 2 && breakableSuccess > 2){
+        if(blockSuccess > 1 && bonusSuccess > 1 && breakableSuccess > 1){
             console.log("end");
             tutorialScoreBar.text.innerHTML = "Good Job. Let's start.";
+            canvas.appendChild(stratButton());
             new Audio('src/speedup.mp3').play();
-        }else if(blockSuccess > 2 && bonusSuccess > 2) {
+            tutorialStart = true;
+        }else if(blockSuccess > 1 && bonusSuccess > 1) {
             console.log("stage3");
             tutorialScoreBar.text.innerHTML = "Tap the treasure chest to open it";
             stage3 = setInterval(tutorialGenerateObstacle, 5000, 2, Math.floor(Math.random() * 2));
             tutorialStart = true;
             new Audio('src/speedup.mp3').play();
-        }else if(blockSuccess > 2){
+        }else if(blockSuccess > 1){
             console.log("stage2");
             tutorialScoreBar.text.innerHTML = "Swipe/Click the arrow to get the gem";
             stage2 = setInterval(tutorialGenerateObstacle, 5000, 1, Math.floor(Math.random() * 2));
@@ -150,4 +155,30 @@ function tutorialFlow(){
         }
     }
 
+}
+
+function stratButton(){
+    var startButton = document.createElement("button");
+    startButton.onclick = function () {
+        window.location.replace("multitasking.html");
+    }
+    startButton.classList.add("startGame");
+    startButton.innerHTML = "Start";
+    startButton.style.position = "absolute";
+    startButton.style.top = "420px";
+    startButton.style.left = "650px";
+    return startButton;
+}
+
+function skipButton(){
+    var skipButton = document.createElement("button");
+    skipButton.onclick = function () {
+        window.location.replace("multitasking.html");
+    }
+    skipButton.classList.add("startGame");
+    skipButton.innerHTML = "Skip";
+    skipButton.style.position = "absolute";
+    skipButton.style.top = "350px";
+    skipButton.style.left = "650px";
+    return skipButton;
 }

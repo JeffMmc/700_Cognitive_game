@@ -249,3 +249,18 @@
 	position:relative;
 	top: -10px;
 }
+
+.startGame{
+	height:54px;
+	width: 120px;
+	border-style: solid;
+	border-color:#FFCA61;
+	background-color: #FFEC85;
+	border-radius: 10px;
+	font-size: 25px;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+.startGame:hover{
+	background-color: #FFCA61;
+}

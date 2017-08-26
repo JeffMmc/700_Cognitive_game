@@ -6,7 +6,7 @@ window.onload = function(){
 	statrGame();
 	updateScore(0);
 	updateSpeedText();
-	//bgm.play();
+	bgm.play();
 }
 
 function statrGame(){

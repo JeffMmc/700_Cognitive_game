@@ -1,0 +1,29 @@
+#obsText{
+    position: relative;
+    top:-20px;
+    left:100px;
+    font-family: Impact, Charcoal, sans-serif;
+    color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 30px;
+}
+
+#tutorialText{
+    position:relative;
+    top: -10px;
+}
+
+.startGame{
+    height:54px;
+    width: 120px;
+    border-style: solid;
+    border-color:#FFCA61;
+    background-color: #FFEC85;
+    border-radius: 10px;
+    font-size: 25px;
+    font-family:Tahoma, Geneva, sans-serif;
+}
+
+.startGame:hover{
+    background-color: #FFCA61;
+}

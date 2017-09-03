@@ -37,7 +37,7 @@ function pauseInterval(){
 }
 
 function resumeInterval() {
-    stage1 = setInterval(tutorialGenerateObstacle, 5000, 0, Math.floor(Math.random() * 2));
+    stage1 = setInterval(tutorialGenerateObstacle, 5000, 0);
     setInterval(tutorialFlow, 5000, 0, 0);
     moveInterval = setInterval(obstacleMove, 1000/30);
     roadMovingInterval = setInterval(tutorialRoadMoving, 1000/30);
@@ -55,16 +55,21 @@ function tutorialRoadMoving(){
     }
 }
 
-function tutorialGenerateObstacle(obsNum, trackNum){
+function tutorialGenerateObstacle(obsNum){
     var tracks = document.getElementsByClassName("track");
 
     var obs = obstacle(obstacleType[obsNum]);
-    tracks[trackNum].appendChild(obs);
+    tracks[Math.floor(Math.random() * 2)].appendChild(obs);
+
+    var obsText = document.createElement("p");
+    obsText.id = "obsText";
+    obsText.style.zIndex = "1";
+    obs.appendChild(obsText);
 
     switch (obsNum) {
         //Action of block
         case 0:
-
+            obsText.innerHTML = "Avoid";
             obs.onclick = function(){
                 //No Action
             };
@@ -72,6 +77,7 @@ function tutorialGenerateObstacle(obsNum, trackNum){
 
         //Action of bonus
         case 1:
+            obsText.innerHTML = "Collect";
             obs.onclick = function(){
                 //No Action
             };
@@ -79,6 +85,7 @@ function tutorialGenerateObstacle(obsNum, trackNum){
 
         //Action of breakable
         case 2:
+            obsText.innerHTML = "Tap";
             obs.onclick = function(){
                 breakable += 1;
                 breakableSuccess += 1;
@@ -93,6 +100,8 @@ function tutorialGenerateObstacle(obsNum, trackNum){
             };
             break;
     }
+
+
 }
 
 function tutorialScoreBar(){
@@ -143,13 +152,13 @@ function tutorialFlow(){
         }else if(blockSuccess > 1 && bonusSuccess > 1) {
             console.log("stage3");
             tutorialScoreBar.text.innerHTML = "Tap the treasure chest to open it";
-            stage3 = setInterval(tutorialGenerateObstacle, 5000, 2, Math.floor(Math.random() * 2));
+            stage3 = setInterval(tutorialGenerateObstacle, 5000, 2);
             tutorialStart = true;
             new Audio('src/speedup.mp3').play();
         }else if(blockSuccess > 1){
             console.log("stage2");
             tutorialScoreBar.text.innerHTML = "Swipe/Click the arrow to get the gem";
-            stage2 = setInterval(tutorialGenerateObstacle, 5000, 1, Math.floor(Math.random() * 2));
+            stage2 = setInterval(tutorialGenerateObstacle, 5000, 1);
             tutorialStart = true;
             new Audio('src/speedup.mp3').play();
         }

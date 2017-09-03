@@ -205,7 +205,7 @@
 	position: fixed;
 	top: 97px;
 	left:17px;
-	z-index : 1;
+	z-index : 2;
 	border-radius: 50px;
 }
 
@@ -245,22 +245,17 @@
 	left:310px;
 }
 
-#tutorialText{
-	position:relative;
-	top: -10px;
-}
-
-.startGame{
-	height:54px;
-	width: 120px;
+#startGameButton{
+	height:80px;
+	width: 200px;
 	border-style: solid;
 	border-color:#FFCA61;
 	background-color: #FFEC85;
 	border-radius: 10px;
 	font-size: 25px;
 	font-family:Tahoma, Geneva, sans-serif;
-}
-
-.startGame:hover{
-	background-color: #FFCA61;
+	z-index : 1;
+	position:fixed;
+	top: 220px;
+	left:310px;
 }

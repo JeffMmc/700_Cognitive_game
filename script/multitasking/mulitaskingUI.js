@@ -25,6 +25,7 @@ function scorebar(){
 		}
 		console.log("pause");
 	}
+	menuButton.disabled = true;
 	
 	scorebar.appendChild(scoreElement);
 	scorebar.appendChild(speedElement);
@@ -124,6 +125,19 @@ function pauseMenu(){
 	pauseM.appendChild(pauseText);
 	pauseM.appendChild(resumeButton);
 	pauseM.appendChild(backButton);
-	
+
 	return pauseM;
+}
+
+function startGameButton() {
+	var startGameButton = document.createElement("button");
+	startGameButton.innerText = "Start";
+	startGameButton.id = "startGameButton";
+	startGameButton.onclick = function () {
+        generateObstacle();
+        resumeInterval();
+        document.getElementById("menuButton").disabled = false;
+        startGameButton.parentNode.removeChild(startGameButton);
+    };
+	return startGameButton;
 }

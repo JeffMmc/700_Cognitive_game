@@ -2,11 +2,10 @@ window.onload = function(){
     console.log("Ready");
     //clear session storage;
     window.sessionStorage.clear();
-	countdown = 180;
+	countdown = 90;
 	statrGame();
 	updateScore(0);
 	updateSpeedText();
-	bgm.play();
 }
 
 function statrGame(){
@@ -18,8 +17,9 @@ function statrGame(){
 		fields[i] = field(i);
 		canvas.appendChild(fields[i]);
 	}
-	generateObstacle();
-	resumeInterval();
+	canvas.appendChild(startGameButton());
+	//generateObstacle();
+	//resumeInterval();
 }
 
 
@@ -43,6 +43,7 @@ function pauseInterval(){
 	clearInterval(speedInterval);
 	clearInterval(timerInterval);
 	clearInterval(roadMovingInterval);
+	bgm.pause();
 }
 
 function resumeInterval() {
@@ -52,6 +53,7 @@ function resumeInterval() {
 	speedInterval = setInterval(updateSpeed, 10000);
 	timerInterval = setInterval(updateTimer, 1000);
 	roadMovingInterval = setInterval(roadMoving, 1000/30);
+    bgm.play();
 }
 
 function endMultitaskingGame(){

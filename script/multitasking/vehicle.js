@@ -9,21 +9,25 @@ function vehicle(){
 	vehicleRender.style.backgroundImage = "url('src/vehicle_" + vehicleColor +".png')";
 	vehicle.appendChild(vehicleRender);
 	
-	swipedetect(vehicle, function(swipedir){
+	/*swipedetect(vehicle, function(swipedir){
 		console.log(swipedir);
 		vehicleMove(vehicle, swipedir);
-	});
-	
+	});*/
+	var hammer = new Hammer(vehicle);
+	hammer.on("panleft panright tap press", function (ev) {
+        vehicleMove(vehicle, ev.type);
+        console.log(ev.type);
+    });
 	return vehicle;
 }
 
 function vehicleMove(v, direction){
-	if(direction == "right" && v.position == "left"){
+	if(direction == "panright" && v.position == "left"){
 		v.parentNode.removeChild(v);
 		fields[v.fieldNum].tracks[1].appendChild(v);
 		v.position = "right";
 		v.moveButton.style.backgroundImage = "url('src/sliderLeft.png')";
-	}else if(direction == "left" && v.position == "right"){
+	}else if(direction == "panleft" && v.position == "right"){
 		v.parentNode.removeChild(v);
 		fields[v.fieldNum].tracks[0].appendChild(v);
 		v.position = "left";

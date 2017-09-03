@@ -10,22 +10,8 @@ function generateObstacle(){
 
         tracks[Math.floor(Math.random() * 2) + i * 2].appendChild(obs);
 
+
         switch (obstacleTypeNum) {
-            //Action of block
-            case 0:
-
-                obs.onclick = function(){
-                    //No Action
-                };
-                break;
-
-            //Action of bonus
-            case 1:
-                obs.onclick = function(){
-                    //No Action
-                };
-                break;
-
             //Action of breakable
             case 2:
                 obs.onclick = function(){
@@ -37,8 +23,6 @@ function generateObstacle(){
                     setTimeout(function(){
                         destroyObstacle(b);
                     }, 1000);
-
-
                 };
                 break;
         }

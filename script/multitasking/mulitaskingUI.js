@@ -64,19 +64,22 @@ function field(fieldNum){
 	moveButton.style.backgroundImage = "url('src/sliderRight.png')";
 	moveButton.vehicle = vehicleElement;
 	vehicleElement.moveButton = moveButton;
-	moveButton.onclick = function(){
-		if(moveButton.vehicle.position == "left"){
-			moveButton.vehicle.parentNode.removeChild(moveButton.vehicle);
-			fields[moveButton.vehicle.fieldNum].tracks[1].appendChild(moveButton.vehicle);
-			moveButton.vehicle.position = "right";
-			moveButton.style.backgroundImage = "url('src/sliderLeft.png')";
-		}else if(moveButton.vehicle.position == "right"){
-			moveButton.vehicle.parentNode.removeChild(moveButton.vehicle);
-			fields[moveButton.vehicle.fieldNum].tracks[0].appendChild(moveButton.vehicle);
-			moveButton.vehicle.position = "left";
-			moveButton.style.backgroundImage = "url('src/sliderRight.png')";
-		}
-	}
+
+    var hammer = new Hammer(moveButton);
+    hammer.on("tap press", function (ev) {
+        if(moveButton.vehicle.position == "left"){
+            moveButton.vehicle.parentNode.removeChild(moveButton.vehicle);
+            fields[moveButton.vehicle.fieldNum].tracks[1].appendChild(moveButton.vehicle);
+            moveButton.vehicle.position = "right";
+            moveButton.style.backgroundImage = "url('src/sliderLeft.png')";
+        }else if(moveButton.vehicle.position == "right"){
+            moveButton.vehicle.parentNode.removeChild(moveButton.vehicle);
+            fields[moveButton.vehicle.fieldNum].tracks[0].appendChild(moveButton.vehicle);
+            moveButton.vehicle.position = "left";
+            moveButton.style.backgroundImage = "url('src/sliderRight.png')";
+        }
+    });
+    
 	field.appendChild(moveButton);
 	
 	

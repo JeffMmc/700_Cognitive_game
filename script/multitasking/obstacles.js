@@ -75,10 +75,16 @@ function obstacleMove(){
 						breakable += 1;
 						collision = true;
 						destroyObstacle(obstacle[i]);
+                        var crashSE = new Audio('src/crash.mp3');
+                        crashSE.volume = 0.3;
+                        crashSE.play();
 					}else{
 						block += 1;
 						collision = true;
 						destroyObstacle(obstacle[i]);
+                        var crashSE = new Audio('src/crash.mp3');
+                        crashSE.volume = 0.3;
+                        crashSE.play();
 					}
 				}
 			}

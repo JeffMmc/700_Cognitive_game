@@ -2,7 +2,7 @@ window.onload = function(){
     console.log("Ready");
     //clear session storage;
     window.sessionStorage.clear();
-	countdown = 90;
+	countdown = 120;
 	statrGame();
 	updateScore(0);
 	updateSpeedText();
@@ -18,8 +18,6 @@ function statrGame(){
 		canvas.appendChild(fields[i]);
 	}
 	canvas.appendChild(startGameButton());
-	//generateObstacle();
-	//resumeInterval();
 }
 
 

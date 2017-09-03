@@ -79,7 +79,7 @@ function field(fieldNum){
             moveButton.style.backgroundImage = "url('src/sliderRight.png')";
         }
     });
-    
+
 	field.appendChild(moveButton);
 	
 	

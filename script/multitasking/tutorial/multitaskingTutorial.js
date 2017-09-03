@@ -1,6 +1,6 @@
 var tutorialScoreBar;
 var stage1, stage2, stage3;
-var stage = 1;
+var stage = 0;
 var tutorialStart = true;
 
 window.onload = function(){
@@ -37,8 +37,7 @@ function pauseInterval(){
 }
 
 function resumeInterval() {
-    stage1 = setInterval(tutorialGenerateObstacle, 5000, 0);
-    setInterval(tutorialFlow, 5000, 0, 0);
+    setInterval(tutorialFlow, 2500, 0, 0);
     moveInterval = setInterval(obstacleMove, 1000/30);
     roadMovingInterval = setInterval(tutorialRoadMoving, 1000/30);
 }
@@ -111,19 +110,19 @@ function tutorialScoreBar(){
 
     var tutorialText = document.createElement("h1");
     tutorialText.id = "tutorialText";
-    tutorialText.innerHTML = "Swipe/Click the arrow to avoid the rock";
+    tutorialText.innerHTML = "Hi, let's start the tutorial.";
     tutorialScoreBar.appendChild(tutorialText);
     tutorialScoreBar.text = tutorialText;
 }
 
 function tutorialFlow(){
-    console.log(tutorialStart);
+
     if(tutorialStart){
         if(blockSuccess > 1 && bonusSuccess > 1 && breakableSuccess > 1){
             if(stage == 3){
                 clearInterval(stage3);
                 tutorialStart = false;
-                stage = 0;
+                stage = 4;
                 localStorage.setItem("passTutorial", true);
             }
 
@@ -140,7 +139,12 @@ function tutorialFlow(){
                 tutorialStart = false;
                 stage = 2;
             }
+        }else{
+            if(stage == 0) {
 
+                tutorialStart = false;
+                stage = 1;
+            }
         }
     }else{
         if(blockSuccess > 1 && bonusSuccess > 1 && breakableSuccess > 1){
@@ -161,9 +165,14 @@ function tutorialFlow(){
             stage2 = setInterval(tutorialGenerateObstacle, 5000, 1);
             tutorialStart = true;
             new Audio('src/speedup.mp3').play();
+        }else{
+            console.log("stage1");
+            tutorialScoreBar.text.innerHTML = "Swipe/Click the arrow to avoid the rock";
+            stage1 = setInterval(tutorialGenerateObstacle, 5000, 0);
+            tutorialStart = true;
         }
     }
-
+    console.log(stage);
 }
 
 function stratButton(){

@@ -2,12 +2,11 @@ var canvas;
 var scorebar, data, menu;
 
 window.onload = function(){
-	console.log(sessionStorage.getItem("currentUser"));
     initResult();
-	for (var key in localStorage){
-		console.log(key + " : " + localStorage.getItem(key));
-		//localStorage.removeItem(key);
-	}
+    for (var key in localStorage){
+        console.log(key + " : " + localStorage.getItem(key));
+        //localStorage.removeItem(key);
+    }
     for (var key in sessionStorage){
         console.log(key + " : " + sessionStorage.getItem(key));
         //localStorage.removeItem(key);

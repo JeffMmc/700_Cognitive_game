@@ -2,6 +2,7 @@
 	width: 800px;
 	height: 480px;
 	overflow-y: scroll;
+	text-align: center;
 }
 
 #data p{
@@ -11,4 +12,21 @@
 #line_chart{
 	width: 700px;
 	height: 200px;
+}
+
+table {
+	margin-top: 10px;
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	background-color: white;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
 }

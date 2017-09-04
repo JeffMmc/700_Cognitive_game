@@ -14,8 +14,9 @@ function generateExistUser(){
             var userid = document.createElement("Button");
             userid.classList.add("id_user");
             userid.innerHTML = localStorage.getItem(key);
+            userid.id = localStorage.getItem(key);
             userid.onclick = function () {
-                sessionStorage.setItem('currentUser', localStorage.getItem(key));
+                sessionStorage.setItem('currentUser', this.id);
                 window.location.replace("index.html");
             }
             userlist.appendChild(userid);

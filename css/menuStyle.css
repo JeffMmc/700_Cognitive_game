@@ -46,3 +46,21 @@
 	float: left;
 	text-align: center;
 }
+
+#logout{
+	width:150px;
+	height: 60px;
+	position: fixed;
+	top:30px;
+	left: 620px;
+	border-style: solid;
+	border-color:#FFCA61;
+	background-color: #FFEC85;
+	border-radius: 10px;
+	font-size: 25px;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+#logout:hover{
+	background-color: #FFCA61;
+}

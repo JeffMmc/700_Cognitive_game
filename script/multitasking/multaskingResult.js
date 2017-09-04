@@ -2,11 +2,16 @@ var canvas;
 var scorebar, data, menu;
 
 window.onload = function(){
+	console.log(sessionStorage.getItem("currentUser"));
     initResult();
 	for (var key in localStorage){
 		console.log(key + " : " + localStorage.getItem(key));
 		//localStorage.removeItem(key);
 	}
+    for (var key in sessionStorage){
+        console.log(key + " : " + sessionStorage.getItem(key));
+        //localStorage.removeItem(key);
+    }
 }
 
 function initResult(){
@@ -14,76 +19,46 @@ function initResult(){
 	scorebar = document.getElementById("result_score");
 	data = document.getElementById("result_data");
 	menu = document.getElementById("result_menu");
+	currentUser = sessionStorage.getItem("currentUser");
 	
 	var score = document.createElement("h1");
-	var blcok = document.createElement("p");
-	var bonus = document.createElement("p");
-	var breakable = document.createElement("p");
-	
-	var blockRate = (localStorage.getItem('currentBlS') / localStorage.getItem('currentBl')) * 100;
-	var bonusRate = (localStorage.getItem('currentBoS') / localStorage.getItem('currentBo')) * 100;
-	var breakableRate = (localStorage.getItem('currentBrS') / localStorage.getItem('currentBr')) * 100;
-	
-	//Get data of last play
-	var i = 0;
-	while(localStorage.getItem('Mt' + i) != null){
-		i += 1;
-	}
-	if(i == 1){
-		i = 0;
-	}else{
-		i -= 2;
+    var newHighScore = document.createElement("p");
+	var improvement = document.createElement("p");
+	var maxCombo = document.createElement("p");
+
+    var scoreIndex = 0;
+    for (var key in localStorage){
+        if(key.substr(0, currentUser.length+5) == currentUser + "MtBlS"){
+            scoreIndex += 1;
+        }
+    }
+	scoreIndex -=1;
+	var lastScore = localStorage.getItem(currentUser+"Mt"+scoreIndex);
+
+	//New High Score
+	if(sessionStorage.getItem("newHighScore")){
+
+        newHighScore.innerHTML = "New High Score!";
+        data.appendChild(newHighScore);
 	}
 
-	var lastScore = localStorage.getItem('Mt' + i);
-	var lastblockRate = (localStorage.getItem('MtBlS' + i) / localStorage.getItem('MtBl' + i)) * 100;
-	var lastbonusRate = (localStorage.getItem('MtBoS' + i) / localStorage.getItem('MtBoS' + i)) * 100;
-	var lastbreakableRate = (localStorage.getItem('MtBrS' + i) / localStorage.getItem('MtBr' + i)) * 100;
-	console.log("a + " + localStorage.getItem('currentScore') / lastScore);
-	//Comment on performance
-	if(i == 0){
-        score.innerHTML = "Good Job For The First Day.";
-	}
-	else if(localStorage.getItem('currentScore') / lastScore > 1.2){
-		score.innerHTML = (lastScore / localStorage.getItem('currentScore') * 100).toFixed(2) + "% improvement. Amazing";
-	}else if (localStorage.getItem('currentScore') / lastScore > 1.0){
-		score.innerHTML = (lastScore / localStorage.getItem('currentScore') * 100).toFixed(2) + "% improvement. Good Job";
+	//Improvement
+	if(sessionStorage.getItem("newHighScore")){
+
+		if(scoreIndex == 0){
+			improvement.innerHTML = "Good job for the first play";
+		}else{
+            var improvedScore = lastScore - sessionStorage.getItem("lastHighScore");
+            improvement.innerHTML = improvedScore + " Points Higher";
+		}
+        data.appendChild(improvement);
 	}else{
-		score.innerHTML = "Good Job";
+        improvement.innerHTML = "Good job!";
+        data.appendChild(improvement);
 	}
+
+	score.innerHTML = "Score: " +  lastScore;
 	scorebar.appendChild(score);
-
-	var improvement = false;
-	if(blockRate > lastblockRate){
-		blcok.innerHTML = "Rock avoid rate improved";
-		data.appendChild(blcok);
-        improvement = true;
-	}
-	
-	if(bonusRate > lastbonusRate){
-		bonus.innerHTML = "Gem collect rate improved";
-		data.appendChild(bonus);
-        improvement = true;
-	}
-	
-	if(bonusRate > lastbonusRate){
-		breakable.innerHTML = "Chest open rate improved";
-		data.appendChild(breakable);
-        improvement = true;
-	}
-
-	if(!improvement){
-        blcok.innerHTML = "Average performance";
-        data.appendChild(blcok);
-	}
-	
-	blcok.innerHTML = "Rock avoid rate improved";
-	data.appendChild(blcok);
-	bonus.innerHTML = "Gem collect rate improved";
-	data.appendChild(bonus);
-	breakable.innerHTML = "Chest open rate improved";
-	data.appendChild(breakable);
-
 	
 	var backButton = document.createElement("button");
 	backButton.innerHTML = "Back";
@@ -99,11 +74,11 @@ function initResult(){
 	
 	menu.appendChild(backButton);
 	menu.appendChild(replayButton);
-	
-	console.log("Block : " + localStorage.getItem('currentBl'));
-	console.log("Success : " + localStorage.currentBlS);
-	console.log("Bonus : " + localStorage.currentBo);
-	console.log("Success : " + localStorage.currentBoS);
-	console.log("Breakable : " +  localStorage.currentBr);
-	console.log("Success : " +  localStorage.currentBrS);
+
+	console.log("Block : " + sessionStorage.getItem('currentBl'));
+	console.log("Success : " + sessionStorage.currentBlS);
+	console.log("Bonus : " + sessionStorage.currentBo);
+	console.log("Success : " + sessionStorage.currentBoS);
+	console.log("Breakable : " +  sessionStorage.currentBr);
+	console.log("Success : " +  sessionStorage.currentBrS);
 }

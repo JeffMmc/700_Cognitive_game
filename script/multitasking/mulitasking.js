@@ -1,5 +1,5 @@
 window.onload = function(){
-	countdown = 120;
+	countdown = 10;
 	statrGame();
 	updateScore(0);
 	updateSpeedText();
@@ -15,6 +15,7 @@ function statrGame(){
 		canvas.appendChild(fields[i]);
 	}
 	canvas.appendChild(startGameButton());
+	currentUser = sessionStorage.getItem("currentUser");
 }
 
 
@@ -56,13 +57,13 @@ function endMultitaskingGame(){
 	pauseInterval();
 	document.getElementById("gc").innerHTML = "";
 	
-	localStorage.setItem('currentScore', score);
-	localStorage.setItem('currentBl', block);
-	localStorage.setItem('currentBlS', blockSuccess);
-	localStorage.setItem('currentBo', bonus);
-	localStorage.setItem('currentBoS', bonusSuccess);
-	localStorage.setItem('currentBr', breakable);
-	localStorage.setItem('currentBrS', breakableSuccess);
+	sessionStorage.setItem('currentScore', score);
+    sessionStorage.setItem('currentBl', block);
+    sessionStorage.setItem('currentBlS', blockSuccess);
+    sessionStorage.setItem('currentBo', bonus);
+    sessionStorage.setItem('currentBoS', bonusSuccess);
+    sessionStorage.setItem('currentBr', breakable);
+    sessionStorage.setItem('currentBrS', breakableSuccess);
 
 	
 	printRecord();

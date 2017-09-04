@@ -19,10 +19,11 @@ function startTutorial(){
     fields[0].style.top = "-6px";
     fields[0].style.left = "200px";
 
-    if(!(localStorage.getItem("passTutorial") === null)){
+    currentUser = sessionStorage.getItem("currentUser");
+
+    if(!(localStorage.getItem(currentUser + "passTutorial") === null)){
         canvas.appendChild(skipButton());
     }
-
 
 }
 
@@ -119,7 +120,7 @@ function tutorialFlow(){
                 clearInterval(stage3);
                 tutorialStart = false;
                 stage = 4;
-                localStorage.setItem("passTutorial", true);
+                localStorage.setItem(currentUser + "passTutorial", true);
             }
 
         }else if(blockSuccess > 1 && bonusSuccess > 1) {

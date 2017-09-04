@@ -35,7 +35,9 @@ function initRegisterButton(){
     registerConfirm.onclick = function () {
         var username = document.getElementById("register_input").value;
 
-        if(localStorage.getItem("user_" + username) === null){
+        if(username.length == 0) {
+            alert("Please enter your name");
+        }else if(localStorage.getItem("user_" + username) === null){
             localStorage.setItem("user_" + username, username);
             sessionStorage.setItem('currentUser', username);
             window.location.replace("index.html");

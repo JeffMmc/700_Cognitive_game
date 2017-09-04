@@ -21,3 +21,4 @@ var scoreText;
 var speedText;
 var collision = false;
 var overallSpeed = 3;
+var currentUser;

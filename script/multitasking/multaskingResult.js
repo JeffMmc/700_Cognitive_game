@@ -57,6 +57,11 @@ function initResult(){
         data.appendChild(improvement);
 	}
 
+	//Max Combo
+    maxCombo.innerHTML = "Max Combo: " + sessionStorage.getItem("maxCombo");
+	data.appendChild(maxCombo);
+
+	//Score
 	score.innerHTML = "Score: " +  lastScore;
 	scorebar.appendChild(score);
 	

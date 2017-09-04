@@ -1,13 +1,6 @@
 function updateScore(){
 	scoreText = document.getElementById("score");
-	score += overallSpeed;
-	scoreText.innerHTML = "Score : " + score;
-}
-
-function bonusScore(addition){
-	scoreText = document.getElementById("score");
-	console.log(addition);
-	score = score + addition;
+	score += (overallSpeed + combo);
 	scoreText.innerHTML = "Score : " + score;
 }
 
@@ -21,6 +14,21 @@ function updateSpeed(){
 	
 	updateSpeedText();
 	collision = false;
+}
+
+function countCombo(){
+	comboText = document.getElementById("combo");
+	combo += 1;
+	comboText.innerHTML = combo + " Combo";
+	if(combo > maxCombo){
+		maxCombo = combo;
+	}
+}
+
+function resetCombo() {
+    comboText = document.getElementById("combo");
+    combo = 0;
+    comboText.innerHTML = combo + " Combo"
 }
 
 function updateSpeedText(){

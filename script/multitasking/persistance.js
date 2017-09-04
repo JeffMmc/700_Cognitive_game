@@ -34,6 +34,7 @@ function persistScore(scoreIndex){
 		localStorage.setItem(currentUser +'MtBoS' + scoreIndex, bonusSuccess);
 		localStorage.setItem(currentUser +'MtBr' + scoreIndex, breakable);
 		localStorage.setItem(currentUser +'MtBrS' + scoreIndex, breakableSuccess);
+    	localStorage.setItem(currentUser +'MtCombo' + scoreIndex, maxCombo);
 }
 
 //For debugging

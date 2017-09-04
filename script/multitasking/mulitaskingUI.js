@@ -9,6 +9,8 @@ function scorebar(){
 	speedElement.id = "speed";
 	var countdownTimer = document.createElement("p");
 	countdownTimer.id = "countdownTimer";
+    var comboCount = document.createElement("p");
+    comboCount.id = "combo";
 	var menuButton = document.createElement("button");
 	menuButton.id = "menuButton";
 	gamePause = false;
@@ -31,6 +33,7 @@ function scorebar(){
 	scorebar.appendChild(speedElement);
 	scorebar.appendChild(countdownTimer);
 	scorebar.appendChild(menuButton);
+    scorebar.appendChild(comboCount);
 	
 	return scorebar;
 }

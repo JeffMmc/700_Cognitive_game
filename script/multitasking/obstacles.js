@@ -19,6 +19,7 @@ function generateObstacle(){
                     breakableSuccess += 1;
                     this.classList = "breakablesub";
                     var b = this;
+                    countCombo();
                     scoreSE.play();
                     setTimeout(function(){
                         destroyObstacle(b);
@@ -56,9 +57,14 @@ function obstacleMove(){
 			if(obstacle[i].className=="block obstacle"){
 				block += 1;
 				blockSuccess += 1;
+                countCombo();
 				scoreSE.play();
 			}else if(obstacle[i].className=="bonus obstacle"){
 				collision = true;
+                resetCombo();
+			}else if(obstacle[i].className=="breakable obstacle"){
+                collision = true;
+                resetCombo();
 			}
 			destroyObstacle(obstacle[i]);
 		}//Deal with collision
@@ -70,10 +76,12 @@ function obstacleMove(){
 						destroyObstacle(obstacle[i]);
 						bonus += 1;
 						bonusSuccess += 1;
+						countCombo();
 						scoreSE.play();
 					}else if(obstacle[i].className=="breakable obstacle"){
 						breakable += 1;
 						collision = true;
+						resetCombo();
 						destroyObstacle(obstacle[i]);
                         var crashSE = new Audio('src/crash.mp3');
                         crashSE.volume = 0.3;
@@ -81,6 +89,7 @@ function obstacleMove(){
 					}else{
 						block += 1;
 						collision = true;
+                        resetCombo();
 						destroyObstacle(obstacle[i]);
                         var crashSE = new Audio('src/crash.mp3');
                         crashSE.volume = 0.3;

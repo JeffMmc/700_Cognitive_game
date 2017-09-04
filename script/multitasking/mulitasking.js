@@ -1,5 +1,5 @@
 window.onload = function(){
-	countdown = 10;
+	countdown = 30;
 	statrGame();
 	updateScore(0);
 	updateSpeedText();
@@ -64,12 +64,7 @@ function endMultitaskingGame(){
     sessionStorage.setItem('currentBoS', bonusSuccess);
     sessionStorage.setItem('currentBr', breakable);
     sessionStorage.setItem('currentBrS', breakableSuccess);
+    sessionStorage.setItem('maxCombo', maxCombo);
 
-	
-	printRecord();
-	for (var key in localStorage){
-		console.log(key);
-		//localStorage.removeItem(key);
-	}
 	window.location.replace("multaskingResult.html");
 }

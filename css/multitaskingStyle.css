@@ -114,6 +114,14 @@
 	top:-10px;
 }
 
+#combo{
+	position:relative;
+	width:200px;
+	right:280px;
+	top:50px;
+	z-index: 2;
+}
+
 #menuButton{
 	position:relative;
 	right:20px;

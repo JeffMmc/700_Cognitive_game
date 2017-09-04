@@ -19,6 +19,8 @@ var block = 0, bonus = 0, breakable = 0;
 var blockSuccess = 0, bonusSuccess = 0, breakableSuccess = 0;
 var scoreText;
 var speedText;
+var comboText;
 var collision = false;
 var overallSpeed = 3;
+var combo = 0, maxCombo = 0;
 var currentUser;

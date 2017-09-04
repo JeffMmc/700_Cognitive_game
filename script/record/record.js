@@ -1,13 +1,17 @@
 var canvas;
 var scorebar, data;
-var chartData;
+var chartData, comboData, stoneData, genData, chestData;
 var currentUser = sessionStorage.getItem("currentUser");
 
 window.onload = function(){
     initResult();
     initUI();
 	google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
+    google.charts.setOnLoadCallback(drawScoreChart);
+    google.charts.setOnLoadCallback(drawComboChart);
+    google.charts.setOnLoadCallback(drawStoneChart);
+    google.charts.setOnLoadCallback(drawGemChart);
+    google.charts.setOnLoadCallback(drawChestChart);
 	for (var key in localStorage){
 		console.log(key + " : " + localStorage.getItem(key));
 		//localStorage.removeItem(key);
@@ -17,8 +21,12 @@ window.onload = function(){
 function initResult(){
 	canvas = document.getElementById("gc");
 	data = document.getElementById("data");
-	
-	chartData =  [['Day', 'Score'],['2004',  1000]]
+
+	chartData =  [['Day', 'Score'],['2004',  1000]];
+    comboData =  [['Day', 'Max Combo'],['2004',  1000]];
+    stoneData =  [['Day', 'Success Rate(%)'],['2004',  1000]];
+    gemData =  [['Day', 'Success Rate(%)'],['2004',  1000]];
+    chestData =  [['Day', 'Success Rate(%)'],['2004',  1000]];
 
 	var dataTable = document.getElementById("data_table");
 	
@@ -85,6 +93,10 @@ function initResult(){
 		
 		i += 1;
 		chartData[i] = ["Play" + i,  parseInt(localStorage.getItem(currentUser + 'Mt' + (i-1)))];
+        comboData[i] = ["Play" + i,  parseInt(localStorage.getItem(currentUser + 'MtCombo' + (i-1)))];
+        stoneData[i] = ["Play" + i, parseInt(blockRate) ];
+        gemData[i] = ["Play" + i,  parseInt(bonusRate)];
+        chestData[i] = ["Play" + i,  parseInt(breakableRate)];
 	}
 	
 	var startIndex;
@@ -92,11 +104,6 @@ function initResult(){
 		chartDataNum = i+1;
 	}else{
 		startIndex = 1;
-	}
-	
-	for(var j = startIndex; j < i; j++){
-		chartData[j] = ["Day" + j,  parseInt(localStorage.getItem(currentUser + 'Mt' + (j-1)))];
-		console.log(chartData[j]);
 	}
 	
 	var backButton = document.createElement("button");
@@ -120,19 +127,59 @@ function initResult(){
 	console.log("Success : " +  localStorage.currentBrS);
 }
 
-function drawChart(){
-
+function drawScoreChart(){
 	var data = google.visualization.arrayToDataTable(chartData);
-
 	var options = {
-	  title: 'Multitasking Record',
+	  title: 'Score Record',
 	  curveType: 'function',
 	  legend: { position: 'bottom' }
 	};
-
-	var chart = new google.visualization.LineChart(document.getElementById('line_chart'));
-
+	var chart = new google.visualization.LineChart(document.getElementById('score_chart'));
 	chart.draw(data, options);
+}
+
+function drawComboChart(){
+    var data = google.visualization.arrayToDataTable(comboData);
+    var options = {
+        title: 'Combo Record',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+    };
+    var chart = new google.visualization.LineChart(document.getElementById('combo_chart'));
+    chart.draw(data, options);
+}
+
+function drawStoneChart(){
+    var data = google.visualization.arrayToDataTable(stoneData);
+    var options = {
+        title: 'Stone Success Rate',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+    };
+    var chart = new google.visualization.LineChart(document.getElementById('stone_chart'));
+    chart.draw(data, options);
+}
+
+function drawGemChart(){
+    var data = google.visualization.arrayToDataTable(gemData);
+    var options = {
+        title: 'Gem Success Rate',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+    };
+    var chart = new google.visualization.LineChart(document.getElementById('gem_chart'));
+    chart.draw(data, options);
+}
+
+function drawChestChart(){
+    var data = google.visualization.arrayToDataTable(chestData);
+    var options = {
+        title: 'Chest Success Rate',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+    };
+    var chart = new google.visualization.LineChart(document.getElementById('chest_chart'));
+    chart.draw(data, options);
 }
 
 function initUI() {

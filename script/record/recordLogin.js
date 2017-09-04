@@ -2,7 +2,6 @@ window.onload = function(){
     //clear session storage;
     window.sessionStorage.clear();
     generateExistUser();
-    document.getElementById("register_panel").style.display = 'none';
 }
 
 function generateExistUser(){

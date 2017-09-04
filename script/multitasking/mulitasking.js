@@ -1,5 +1,5 @@
 window.onload = function(){
-	countdown = 30;
+	countdown = 90;
 	statrGame();
 	updateScore(0);
 	updateSpeedText();
@@ -49,7 +49,7 @@ function resumeInterval() {
 	speedInterval = setInterval(updateSpeed, 15000);
 	timerInterval = setInterval(updateTimer, 1000);
 	roadMovingInterval = setInterval(roadMoving, 1000/30);
-    //bgm.play();
+    bgm.play();
 }
 
 function endMultitaskingGame(){

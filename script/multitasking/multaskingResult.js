@@ -36,15 +36,15 @@ function initResult(){
 	var lastScore = localStorage.getItem(currentUser+"Mt"+scoreIndex);
 
 	//New High Score
-	if(sessionStorage.getItem("newHighScore")){
+	if(sessionStorage.getItem("newHighScore") == 1){
 
         newHighScore.innerHTML = "New High Score!";
         data.appendChild(newHighScore);
 	}
 
 	//Improvement
-	if(sessionStorage.getItem("newHighScore")){
-
+	if(sessionStorage.getItem("newHighScore") == 1){
+        console.log(sessionStorage.getItem("newHighScore"));
 		if(scoreIndex == 0){
 			improvement.innerHTML = "Good job for the first play";
 		}else{

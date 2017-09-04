@@ -7,17 +7,17 @@ function recordMultaskingScore(){
     }
 
     persistScore(scoreIndex);
-    sessionStorage.setItem("newHighScore", false);
+    sessionStorage.setItem("newHighScore", 0);
 
     if(scoreIndex == 0){
         //First score of all time
-        sessionStorage.setItem("newHighScore", true);
+        sessionStorage.setItem("newHighScore", 1);
         localStorage.setItem(currentUser + "MtBest", score);
 	}else{
         var bestScore = localStorage.getItem(currentUser + "MtBest");
 
         if(score > bestScore){
-        	sessionStorage.setItem("newHighScore", true);
+        	sessionStorage.setItem("newHighScore", 1);
             sessionStorage.setItem("lastHighScore", bestScore);
             localStorage.setItem(currentUser + "MtBest", score);
 		}

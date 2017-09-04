@@ -45,8 +45,8 @@ function pauseInterval(){
 function resumeInterval() {
 	generateInterval = setInterval(generateObstacle, 5000);
 	moveInterval = setInterval(obstacleMove, 1000/30);
-	scoreInterval = setInterval(updateScore, 1000);
-	speedInterval = setInterval(updateSpeed, 10000);
+	scoreInterval = setInterval(updateScore, 2000);
+	speedInterval = setInterval(updateSpeed, 15000);
 	timerInterval = setInterval(updateTimer, 1000);
 	roadMovingInterval = setInterval(roadMoving, 1000/30);
     bgm.play();

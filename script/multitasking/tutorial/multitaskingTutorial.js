@@ -4,13 +4,9 @@ var stage = 0;
 var tutorialStart = true;
 
 window.onload = function(){
-    console.log("Ready");
-    //clear session storage;
-    window.sessionStorage.clear();
     countdown = 60;
     startTutorial();
     resumeInterval();
-    //bgm.play();
 }
 
 function startTutorial(){

@@ -1,7 +1,4 @@
 window.onload = function(){
-    console.log("Ready");
-    //clear session storage;
-    window.sessionStorage.clear();
 	countdown = 120;
 	statrGame();
 	updateScore(0);

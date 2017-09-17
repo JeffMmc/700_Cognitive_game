@@ -4,6 +4,7 @@ var stage = 0;
 var tutorialStart = true;
 
 window.onload = function(){
+    checkLogin();
     countdown = 60;
     startTutorial();
     resumeInterval();

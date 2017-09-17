@@ -2,7 +2,8 @@
 userName='Jing';
 currentLevel=0;
 hint=-1;
-window.onload = function(){   
+window.onload = function(){
+    checkLogin();
     localStorage.clear();
     initialData(userName); 
     //<embed src="/music/good_enough.mp3" width="180" height="90" loop="false" autostart="false" hidden="true" />

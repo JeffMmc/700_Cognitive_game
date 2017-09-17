@@ -2,6 +2,7 @@ var canvas;
 var scorebar, data, menu;
 
 window.onload = function(){
+	checkLogin();
     initResult();
     for (var key in localStorage){
         console.log(key + " : " + localStorage.getItem(key));

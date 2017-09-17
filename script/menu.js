@@ -3,6 +3,7 @@ var memoryLink;
 var multitaskingLink;
 
 window.onload = function(){
+    checkLogin();
 	initMenu();
 }
 

@@ -1,10 +1,11 @@
 window.onload = function(){
-	countdown = 90;
+	checkLogin();
+	countdown = 120;
 	statrGame();
 	updateScore(0);
 	updateSpeedText();
 }
-
+// Generate UI and init game
 function statrGame(){
 	canvas = document.getElementById("gc");
 	var trackNum = 2;
@@ -18,7 +19,7 @@ function statrGame(){
 	currentUser = sessionStorage.getItem("currentUser");
 }
 
-
+//Play time count down
 function updateTimer(){
 	if(countdown > 0){
 		countdown -= 1;
@@ -32,6 +33,7 @@ function updateTimer(){
 	}
 }
 
+//Pause or end the game
 function pauseInterval(){
 	clearInterval(generateInterval);
 	clearInterval(moveInterval);
@@ -42,16 +44,18 @@ function pauseInterval(){
 	bgm.pause();
 }
 
+//Start or resume the game
 function resumeInterval() {
 	generateInterval = setInterval(generateObstacle, 5000);
 	moveInterval = setInterval(obstacleMove, 1000/30);
 	scoreInterval = setInterval(updateScore, 2000);
-	speedInterval = setInterval(updateSpeed, 15000);
+	speedInterval = setInterval(updateSpeed, 10000);
 	timerInterval = setInterval(updateTimer, 1000);
 	roadMovingInterval = setInterval(roadMoving, 1000/30);
     bgm.play();
 }
 
+//End of the game. Save play result to session storage.
 function endMultitaskingGame(){
 	recordMultaskingScore(score);
 	pauseInterval();

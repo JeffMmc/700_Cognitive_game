@@ -195,6 +195,7 @@ function Pot(dishes,recipes){
                 console.log("no match");
                 playButtonSound('wrongSound');
                 increment(userName,'wrong'+currentLevel);
+                preWrong += 1;
                 this.pot = [];
                 this.clearPot();
                 ingredients.refreshCounter();
@@ -219,6 +220,7 @@ function Pot(dishes,recipes){
         console.log("Match");
         playButtonSound('correctSound');
         increment(userName,'correct'+currentLevel);
+        preCorrect+=1;
         score++;
         this.getNextDish(); //this checks for win condition.
         

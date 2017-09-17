@@ -28,8 +28,6 @@ window.onload = function(){
     var startButton = createClickButton("Start Game", goToMainScreen);
     game.appendChild(startButton);
 
-    
-    //clearScreen(game);
 }
 
 //Core functionalities for game
@@ -38,6 +36,9 @@ function startGame(level){
     clearScreen();
     changebgm('Levels');
     loadKitchen();
+    preLevel = level;
+    preCorrect = 0;
+    preWrong = 0;
 
     var ingredientsArray = ["prawn","crab","chilli","tomato","chicken","rice","noodles","egg","coconut","ice","sugar","peanut"];
     var recipes = {

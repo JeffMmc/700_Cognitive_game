@@ -65,6 +65,9 @@ function persistScore(){
         }
     }
 
-    var userData=JSON.parse(localStorage[userName]);
-    localStorage.setItem(currentUser+'Memory'+scoreIndex, JSON.stringify(userData));
+    var presistData = {'score':preScore,'level':preLevel,
+        'correct':preCorrect,'wrong':preWrong,
+		'hint': hint-1, 'time': timeUsed
+    };
+    localStorage.setItem(currentUser+'Memory'+scoreIndex, JSON.stringify(presistData));
 }

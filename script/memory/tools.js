@@ -326,6 +326,7 @@ function showEndGamePopup(){
     popupNewRecords.innerHTML = 'New High Score!';
     board.appendChild(popupNewRecords);
     }
+    preScore = result[0];
 
     var popupComment = document.createElement("h2");
     popupComment.className+=" board-text";

@@ -6,9 +6,10 @@
     </head>
     <body>
         <div id="gc">
-			
+
 			<div id="data">
 				<h1 id="user_name"></h1>
+				<h2>Multitasking</h2>
 				<div class="tab">
 					<button class="tablinks" onclick="openChart(event, 'Score')">Score</button>
 					<button class="tablinks" onclick="openChart(event, 'Combo')">Combo</button>
@@ -54,6 +55,28 @@
 					</tr>
 				</table>
 
+				<h2>Memory</h2>
+				<div class="tab">
+					<button class="tablinks" onclick="openChart(event, 'Score')">Score</button>
+					<button class="tablinks" onclick="openChart(event, 'Combo')">Combo</button>
+					<button class="tablinks" onclick="openChart(event, 'Stone')">Stone</button>
+					<button class="tablinks" onclick="openChart(event, 'Gem')">Gem</button>
+					<button class="tablinks" onclick="openChart(event, 'Chest1')">Chest</button>
+				</div>
+
+				<table id="memory_table">
+					<tr>
+						<th>Play</th>
+						<th>Score</th>
+						<th>Level</th>
+						<th>Time</th>
+						<th>Hint</th>
+						<th>Correct</th>
+						<th>Wrong</th>
+						<th>%</th>
+					</tr>
+				</table>
+
 				<button id="record_back">Back</button>
 			</div>
 
@@ -62,6 +85,7 @@
 		
 		<script src="script/record/record.js"></script>
 		<script src="script/record/tabs.js"></script>
+		<script src="script/record/multitaskingRecord.js"></script>
 		
 		 <div id="chart_div"></div>
     </body>

@@ -338,6 +338,11 @@ function showEndGamePopup(){
     
     board.appendChild(goToLevelScreen);
     TimeUsed=0;
+    persistScore();
+    for (var key in localStorage){
+        console.log(key + " : " + localStorage.getItem(key));
+        //localStorage.removeItem(key);
+    }
   
 }
 

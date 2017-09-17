@@ -1,19 +1,24 @@
+<!DOCTYPE HTML>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css"/>
+        <title>Get Cooking</title>
+
+        <link rel="stylesheet" href="css/memory/style.css"/>
+
+        <meta charset="utf-8">
     </head>
     <body>
-        <div id="gc">
-            <div id="win">Congratulations</div>
-        </div>
-        <div class="menu">
-            <button onclick="restart()"> Restart </button>
-            <select id="gameDifficulty">
-                <option value="0" selected> Easy </option>
-                <option value="1"> Medium </option>
-                <option value="2"> Hard </option>
-            </select>
-        </div>
-        <script src="script.js"></script>
+        <div id="game"></div>
+
+        <!--Loading Modules-->
+        <script src="script/memory/pot.js"></script>
+        <script src="script/memory/ingredients.js"></script>
+        <!--Loading Main Scripts-->
+        <script src="script/memory/tools.js"></script>
+        <script src="script/memory/data.js"></script>
+        <script src="script/memory/main.js"></script>
+        <script src="script/memory/setting.js"></script><!-- handles all game logic -->
+
     </body>
+    
 </html>

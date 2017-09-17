@@ -17,7 +17,7 @@ function generateExistUser(){
             userid.id = localStorage.getItem(key);
             userid.onclick = function () {
                 sessionStorage.setItem('currentUser', this.id);
-                window.location.replace("index.html");
+                window.location.replace("menu.html");
             }
             userlist.appendChild(userid);
         }
@@ -40,7 +40,7 @@ function initRegisterButton(){
         }else if(localStorage.getItem("user_" + username) === null){
             localStorage.setItem("user_" + username, username);
             sessionStorage.setItem('currentUser', username);
-            window.location.replace("index.html");
+            window.location.replace("menu.html");
         }else{
             alert(username + " has been used");
         }

@@ -12,6 +12,6 @@ function initMenu(){
 
     var logout = document.getElementById("logout");
     logout.onclick = function () {
-		window.location.replace("login.html");
+		window.location.replace("index.html");
     }
 }

@@ -6,7 +6,7 @@ function vehicle(){
 	var vehicleRender = document.createElement("div");
 	vehicleRender.classList.add("vehicleRender");
 	var vehicleColor =  Math.floor(Math.random() * 5 + 1);
-	vehicleRender.style.backgroundImage = "url('src/vehicle_" + vehicleColor +".png')";
+	vehicleRender.style.backgroundImage = "url('src/multitasking/image/vehicle_" + vehicleColor +".png')";
 	vehicle.appendChild(vehicleRender);
 	
 	/*swipedetect(vehicle, function(swipedir){
@@ -26,12 +26,12 @@ function vehicleMove(v, direction){
 		v.parentNode.removeChild(v);
 		fields[v.fieldNum].tracks[1].appendChild(v);
 		v.position = "right";
-		v.moveButton.style.backgroundImage = "url('src/sliderLeft.png')";
+		v.moveButton.style.backgroundImage = "url('src/multitasking/image/sliderLeft.png')";
 	}else if(direction == "panleft" && v.position == "right"){
 		v.parentNode.removeChild(v);
 		fields[v.fieldNum].tracks[0].appendChild(v);
 		v.position = "left";
-		v.moveButton.style.backgroundImage = "url('src/sliderRight.png')";
+		v.moveButton.style.backgroundImage = "url('src/multitasking/image/sliderRight.png')";
 	}
 }
 

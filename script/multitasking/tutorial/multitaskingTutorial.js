@@ -148,20 +148,20 @@ function tutorialFlow(){
             console.log("end");
             tutorialScoreBar.text.innerHTML = "Good Job. Let's start.";
             canvas.appendChild(stratButton());
-            new Audio('src/speedup.mp3').play();
+            new Audio('src/multitasking/music/speedup.mp3').play();
             tutorialStart = true;
         }else if(blockSuccess > 1 && bonusSuccess > 1) {
             console.log("stage3");
             tutorialScoreBar.text.innerHTML = "Tap the treasure chest to open it";
             stage3 = setInterval(tutorialGenerateObstacle, 5000, 2);
             tutorialStart = true;
-            new Audio('src/speedup.mp3').play();
+            new Audio('src/multitasking/music/speedup.mp3').play();
         }else if(blockSuccess > 1){
             console.log("stage2");
             tutorialScoreBar.text.innerHTML = "Swipe/Click the arrow to get the gem";
             stage2 = setInterval(tutorialGenerateObstacle, 5000, 1);
             tutorialStart = true;
-            new Audio('src/speedup.mp3').play();
+            new Audio('src/multitasking/music/speedup.mp3').play();
         }else{
             console.log("stage1");
             tutorialScoreBar.text.innerHTML = "Swipe/Click the arrow to avoid the rock";

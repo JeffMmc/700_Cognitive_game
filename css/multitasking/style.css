@@ -1,0 +1,90 @@
+#gc {
+	width: 800px;
+	height: 480px;
+	float: left;
+	background-color: #C9F0D6;
+}
+
+.selected {
+    -webkit-transform: rotateY(180deg); /* Safari */
+    transform: rotateY(180deg);
+    background-color: white;
+    transition: all 0.5s ease-in;
+}
+
+.fade {
+    opacity: 1 !important;
+    transition: all 1.5s ease-in;
+}
+
+.fade-animation {
+    animation: fade-anim 2s linear;
+}
+
+@keyframes fade-anim {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+
+.flex-row {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    margin-top: 20px;
+   text-align: center;
+}
+
+.cards-3 {
+    width: 200px;
+    height: 188px;
+    border: 1px solid #ff6666;
+    margin: 2px;
+}
+
+.cards-4 {
+    display: inline-block;
+    width: 200px;
+    margin:2px;
+    height:188px;
+    border: 1px solid #ff6666;
+
+}
+
+.cards-6 {
+    width: 200px;
+    margin:2px;
+    height:188px;
+    border: 1px solid #ff6666;
+}
+
+.cards {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.5s ease-out;
+}
+
+.hidden {
+    background-color: #ff6666;
+    color:transparent;
+    opacity: 0;
+}
+
+#win {
+    display: block;
+    width: 100%;
+    color: #40bf40;
+    font-size: 72px;
+    text-align: center;
+    font-weight: 700;
+    opacity: 0;
+}

@@ -1,0 +1,471 @@
+html, body {
+    font-family: "Arial", sans-serif;
+}
+
+#game {
+    width: 800px;
+    height: 480px;
+    background-color:#e26060;
+}
+
+.hide {
+    display:none !important;
+}
+
+.kitchen {
+    background: url("../../assets/img/kitchen.png") no-repeat;
+}
+
+#loading, #logo {
+    width: 50%;
+    margin: auto;
+    display: block;
+    padding-top: 130px;
+}
+
+#top-logo {
+    width:50%;
+    margin:auto;
+    display: block;
+    padding-top: 25px;
+}
+
+.level-header {
+    margin-bottom: 25px !important;
+}
+
+#score-board, #timer {
+    font-size: 18px;
+    color: white;
+    float:right;
+    padding-right: 50px;
+    vertical-align: top;
+}
+
+#score-board {
+    clear: both;
+    margin-top: 0 !important;
+}
+
+#recipe-book {
+    border: 1px solid #fa8132;
+    background-color: #e86a17;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-left: 10px;
+    top: 270px;
+    padding-top:10px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+
+#recipe-book:hover {
+    background-color: #fa8132;
+}
+
+#board {
+    border: 3px solid #e86a17;
+    background-color: #fa8132;
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    margin-left: 100px;
+    width: 600px;
+    height: 300px;
+    opacity: 0.95;
+    z-index:10000;
+    cursor: pointer;
+}
+
+.back-button {
+    background: url("../../assets/img/back.png") no-repeat;
+    width: 50px;
+    height: 40px;
+    margin-top:10px;
+    margin-left: 10px;
+    cursor: pointer;
+    display:inline-block;
+}
+
+.game-button {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 3px solid #FA7F30;
+    background-color: #e86a17;
+    background: #e86a17; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#fa8132, #e86a17); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fa8132, #e86a17); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fa8132, #e86a17); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fa8132, #e86a17); /* Standard syntax */
+    margin: auto;
+    margin-top: 20px;
+    
+}
+
+.game-button:hover{
+    background: #e86a17;
+    cursor: pointer;
+}
+
+.button-text {
+    color: white;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.recipe-block{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.recipe-ingredient {
+    display:inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.recipe-ingredient > img {
+    width: 50px;
+    height: auto;
+}
+
+.recipe-equals {
+    width: 25px;
+    height: auto;
+    display: inline-block;
+    margin-left: 12.5px;
+    margin-right: 12.5px;
+    margin-bottom: 12.5px;
+}
+
+.final-dish {
+    display: inline-block;
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#board-header {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#board-content {
+    max-height: 180px;
+    height: 180px;
+    width: 400px;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+#board-content-tutorial{
+    max-height: 150px;
+    height: 100px;
+    width: 400px;
+    margin: auto;
+    overflow-y: hidden;
+}
+
+#board-content::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,.3);
+    box-shadow: inset 0 0 6px rgba(255,255,255,.3);
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+#board-content::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: transparent;
+}
+
+#board-content::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,.3);
+    box-shadow: inset 0 0 6px rgba(255,255,255,.3);
+	background-color: transparent;
+}
+
+.board-text {
+    margin: 10px 10px 20px 10px;
+    color: white;
+    text-align: center;
+}
+
+.instruction-text {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.close-button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #e86a17;
+    background: #e86a17; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#fa8132, #e86a17); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fa8132, #e86a17); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fa8132, #e86a17); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fa8132, #e86a17); /* Standard syntax */
+    margin: auto;
+    margin-top:10px;
+}
+
+.close-button:hover{
+    background: #e86a17;
+    border: 2px solid #e86a17;
+}
+
+.close-button > .button-text{
+    font-size:15px;
+    margin-top:5px;
+}
+
+#counter {
+    margin-top: 150px;
+}
+
+#pot-block {
+    margin-top: 100px;
+    margin-left: 275px;
+    width: 300px;
+    height: 50px;
+}
+
+.pot-ingredient {
+    display:inline-block;
+    margin-left: 8px;
+    margin-right:8px;
+    cursor: pointer;
+}
+
+.pot-ingredient-img {
+    width: 45px;
+    height: auto;
+}
+
+#dish-block{
+    position:absolute;
+    left: 350px;
+    top: 30px;
+    margin: auto;
+    
+}
+
+#dish-image {
+    display: block;
+    margin:auto;
+}
+
+#dish-description {
+    margin-top: 7px;
+    margin-bottom: 0;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+.cook-button {
+    display: inline-block;
+    vertical-align: top;
+    margin-top:10px;
+    margin-left: 10px;
+    width: 70px;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #e86a17;
+    background: #e86a17; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#fa8132, #e86a17); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fa8132, #e86a17); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fa8132, #e86a17); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fa8132, #e86a17); /* Standard syntax */
+    cursor: pointer;
+}
+
+.cook-button:hover{
+    background: #e86a17;
+    border: 2px solid #e86a17;
+}
+
+
+.cook-button-text {
+    padding-top:5px;
+    padding-bottom:5px;
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.ingredient-block {
+    display:inline-block;
+    margin-left:10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#ingredient-0, #ingredient-7 {
+    margin-left:20px;
+}
+
+#ingredient-3{
+    margin-left:275px;
+}
+
+#ingredient-10 {
+    margin-left: 315px;
+}
+
+.ingredient-block-img {
+    width: 55px;
+    height: auto;
+}
+
+#hover-arrow {
+    position: absolute;
+    height: 39px;
+    width: 30px;
+    margin-left: 20px;
+    background: url("../../assets/img/blueDown.png") no-repeat;
+    
+}
+
+#hover-text {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    top: 225px;
+    left: 300px;
+    font-size: 14px;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/** INPUT **/
+
+input[type=range] {
+	margin-left: 16%;
+	margin-top: 10%;
+	margin-bottom: 0;
+	margin-right: 0;
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    
+    /*fix for FF unable to apply focus style bug */
+    border: 1px solid white;
+    
+    /*required for proper track sizing in FF*/
+    width: 300px;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 200px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 200px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+#volNum{
+	margin-top:-2.5%;
+	margin-left: 75%;
+    margin-bottom: 10%;
+}
+#volTxt{
+	margin-top: 8.5%;
+    margin-left: 15%;
+    float: left;
+}
+#set-logo{
+ 	width:40%;
+    margin:auto;
+    display: block;
+    padding-top: 25px;
+}

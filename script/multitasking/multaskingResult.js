@@ -67,7 +67,7 @@ function initResult(){
 	var backButton = document.createElement("button");
 	backButton.innerHTML = "Back";
 	backButton.onclick = function(){
-		window.location.replace("index.html");
+		window.location.replace("menu.html");
 	}
 	
 	var replayButton = document.createElement("button");

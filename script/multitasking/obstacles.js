@@ -19,7 +19,9 @@ function generateObstacle(){
                     breakableSuccess += 1;
                     this.classList = "breakablesub";
                     var b = this;
-                    countCombo();
+                    try{
+                        countCombo();
+                    }catch (err){};
                     scoreSE.play();
                     setTimeout(function(){
                         destroyObstacle(b);
@@ -57,14 +59,22 @@ function obstacleMove(){
 			if(obstacle[i].className=="block obstacle"){
 				block += 1;
 				blockSuccess += 1;
-                countCombo();
+				try{
+                    countCombo();
+                }catch (err){};
+
 				scoreSE.play();
 			}else if(obstacle[i].className=="bonus obstacle"){
 				collision = true;
-                resetCombo();
+                try{
+                    resetCombo();
+                }catch (err){};
+
 			}else if(obstacle[i].className=="breakable obstacle"){
                 collision = true;
-                resetCombo();
+                try{
+                    resetCombo();
+                }catch (err){};
 			}
 			destroyObstacle(obstacle[i]);
 		}//Deal with collision
@@ -76,22 +86,28 @@ function obstacleMove(){
 						destroyObstacle(obstacle[i]);
 						bonus += 1;
 						bonusSuccess += 1;
-						countCombo();
+                        try{
+                            countCombo();
+                        }catch (err){};
 						scoreSE.play();
 					}else if(obstacle[i].className=="breakable obstacle"){
 						breakable += 1;
 						collision = true;
-						resetCombo();
+                        try{
+                            resetCombo();
+                        }catch (err){};;
 						destroyObstacle(obstacle[i]);
-                        var crashSE = new Audio('src/crash.mp3');
+                        var crashSE = new Audio('src/multitasking/music/crash.mp3');
                         crashSE.volume = 0.3;
                         crashSE.play();
 					}else{
 						block += 1;
 						collision = true;
-                        resetCombo();
+                        try{
+                            resetCombo();
+                        }catch (err){};
 						destroyObstacle(obstacle[i]);
-                        var crashSE = new Audio('src/crash.mp3');
+                        var crashSE = new Audio('src/multitasking/music/crash.mp3');
                         crashSE.volume = 0.3;
                         crashSE.play();
 					}

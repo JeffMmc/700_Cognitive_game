@@ -7,7 +7,7 @@ function updateScore(){
 function updateSpeed(){
 	if (!collision && overallSpeed <= 10){
 		overallSpeed += 1;
-		new Audio('src/speedup.mp3').play();
+		new Audio('src/multitasking/music/speedup.mp3').play();
 	}else if (collision && overallSpeed > 2){
 		overallSpeed -= 1;
 	}

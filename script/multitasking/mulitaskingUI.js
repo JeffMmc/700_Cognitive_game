@@ -42,7 +42,7 @@ function field(fieldNum){
 	var field = document.createElement("div");
 	field.classList.add("field");
 	field.tracks = new Array(2);
-	field.style.backgroundImage = "url('src/grass.png')";
+	field.style.backgroundImage = "url('src/multitasking/image/grass.png')";
 	
 	//Generate track
 	for(var j = 0; j < 2; j++){
@@ -54,7 +54,7 @@ function field(fieldNum){
 			vehicleElement.fieldNum = fieldNum;
 			trackElement.appendChild(vehicleElement);
 		}
-		trackElement.style.backgroundImage = "url('src/road.png')";
+		trackElement.style.backgroundImage = "url('src/multitasking/image/road.png')";
 		trackElement.style.backgroundPosition = "0px 100px";
 		trackElement.yPos = 0;
 		field.appendChild(trackElement);
@@ -64,7 +64,7 @@ function field(fieldNum){
 	//Generate button
 	var moveButton = document.createElement("button");
 	moveButton.classList.add("moveButton");
-	moveButton.style.backgroundImage = "url('src/sliderRight.png')";
+	moveButton.style.backgroundImage = "url('src/multitasking/image/sliderRight.png')";
 	moveButton.vehicle = vehicleElement;
 	vehicleElement.moveButton = moveButton;
 
@@ -74,12 +74,12 @@ function field(fieldNum){
             moveButton.vehicle.parentNode.removeChild(moveButton.vehicle);
             fields[moveButton.vehicle.fieldNum].tracks[1].appendChild(moveButton.vehicle);
             moveButton.vehicle.position = "right";
-            moveButton.style.backgroundImage = "url('src/sliderLeft.png')";
+            moveButton.style.backgroundImage = "url('src/multitasking/image/sliderLeft.png')";
         }else if(moveButton.vehicle.position == "right"){
             moveButton.vehicle.parentNode.removeChild(moveButton.vehicle);
             fields[moveButton.vehicle.fieldNum].tracks[0].appendChild(moveButton.vehicle);
             moveButton.vehicle.position = "left";
-            moveButton.style.backgroundImage = "url('src/sliderRight.png')";
+            moveButton.style.backgroundImage = "url('src/multitasking/image/sliderRight.png')";
         }
     });
 
@@ -125,7 +125,7 @@ function pauseMenu(){
 	backButton.id = "back_button";
 	backButton.onclick = function(){
 		resumeInterval();
-		window.location.replace("index.html");
+		window.location.replace("menu.html");
 	}
 	
 	pauseM.appendChild(pauseText);

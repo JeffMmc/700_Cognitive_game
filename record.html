@@ -8,75 +8,77 @@
         <div id="gc">
 
 			<div id="data">
-				<h1 id="user_name"></h1>
-				<h2>Multitasking</h2>
-				<div class="tab">
-					<button class="tablinks" onclick="openChart(event, 'Score')">Score</button>
-					<button class="tablinks" onclick="openChart(event, 'Combo')">Combo</button>
-					<button class="tablinks" onclick="openChart(event, 'Stone')">Stone</button>
-					<button class="tablinks" onclick="openChart(event, 'Gem')">Gem</button>
-					<button class="tablinks" onclick="openChart(event, 'Chest')">Chest</button>
+				<div id="multitasking_data">
+					<h1 id="user_name"></h1>
+					<h2>Multitasking</h2>
+					<div class="tab">
+						<button class="tablinks" onclick="openChart(event, 'Score')">Score</button>
+						<button class="tablinks" onclick="openChart(event, 'Combo')">Combo</button>
+						<button class="tablinks" onclick="openChart(event, 'Stone')">Stone</button>
+						<button class="tablinks" onclick="openChart(event, 'Gem')">Gem</button>
+						<button class="tablinks" onclick="openChart(event, 'Chest')">Chest</button>
+					</div>
+
+					<div id="Score" class="tabcontent">
+						<div id="score_chart"> </div>
+					</div>
+
+					<div id="Combo" class="tabcontent">
+						<div id="combo_chart"> </div>
+					</div>
+
+					<div id="Stone" class="tabcontent">
+						<div id="stone_chart"> </div>
+					</div>
+
+					<div id="Gem" class="tabcontent">
+						<div id="gem_chart"> </div>
+					</div>
+
+					<div id="Chest" class="tabcontent">
+						<div id="chest_chart"> </div>
+					</div>
+
+					<table id="data_table">
+						<tr>
+							<th>Play</th>
+							<th>Score</th>
+							<th>MaxCombo</th>
+							<th>Stone</th>
+							<th>Success</th>
+							<th>%</th>
+							<th>Gem</th>
+							<th>Success</th>
+							<th>%</th>
+							<th>Chest</th>
+							<th>Success</th>
+							<th>%</th>
+						</tr>
+					</table>
 				</div>
+				<div id = "memory_data">
+					<h2>Memory</h2>
+					<div class="tab">
+						<button class="tablinks" onclick="openChart(event, 'Score')">Score</button>
+						<button class="tablinks" onclick="openChart(event, 'Combo')">Combo</button>
+						<button class="tablinks" onclick="openChart(event, 'Stone')">Stone</button>
+						<button class="tablinks" onclick="openChart(event, 'Gem')">Gem</button>
+						<button class="tablinks" onclick="openChart(event, 'Chest1')">Chest</button>
+					</div>
 
-				<div id="Score" class="tabcontent">
-					<div id="score_chart"> </div>
+					<table id="memory_table">
+						<tr>
+							<th>Play</th>
+							<th>Score</th>
+							<th>Level</th>
+							<th>Time</th>
+							<th>Hint</th>
+							<th>Correct</th>
+							<th>Wrong</th>
+							<th>%</th>
+						</tr>
+					</table>
 				</div>
-
-				<div id="Combo" class="tabcontent">
-					<div id="combo_chart"> </div>
-				</div>
-
-				<div id="Stone" class="tabcontent">
-					<div id="stone_chart"> </div>
-				</div>
-
-				<div id="Gem" class="tabcontent">
-					<div id="gem_chart"> </div>
-				</div>
-
-				<div id="Chest" class="tabcontent">
-					<div id="chest_chart"> </div>
-				</div>
-
-				<table id="data_table">
-					<tr>
-						<th>Play</th>
-						<th>Score</th>
-						<th>MaxCombo</th>
-						<th>Stone</th>
-						<th>Success</th>
-						<th>%</th>
-						<th>Gem</th>
-						<th>Success</th>
-						<th>%</th>
-						<th>Chest</th>
-						<th>Success</th>
-						<th>%</th>
-					</tr>
-				</table>
-
-				<h2>Memory</h2>
-				<div class="tab">
-					<button class="tablinks" onclick="openChart(event, 'Score')">Score</button>
-					<button class="tablinks" onclick="openChart(event, 'Combo')">Combo</button>
-					<button class="tablinks" onclick="openChart(event, 'Stone')">Stone</button>
-					<button class="tablinks" onclick="openChart(event, 'Gem')">Gem</button>
-					<button class="tablinks" onclick="openChart(event, 'Chest1')">Chest</button>
-				</div>
-
-				<table id="memory_table">
-					<tr>
-						<th>Play</th>
-						<th>Score</th>
-						<th>Level</th>
-						<th>Time</th>
-						<th>Hint</th>
-						<th>Correct</th>
-						<th>Wrong</th>
-						<th>%</th>
-					</tr>
-				</table>
-
 				<button id="record_back">Back</button>
 			</div>
 
@@ -86,6 +88,7 @@
 		<script src="script/record/record.js"></script>
 		<script src="script/record/tabs.js"></script>
 		<script src="script/record/multitaskingRecord.js"></script>
+		<script src="script/record/memoryRecord.js"></script>
 		
 		 <div id="chart_div"></div>
     </body>

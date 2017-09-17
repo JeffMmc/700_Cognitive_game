@@ -1,6 +1,7 @@
 var canvas;
 var scorebar, data;
 var chartData, comboData, stoneData, genData, chestData;
+var score1, score2, score3, time1, time2, time3, rate1, rate2, rate3;
 var currentUser = sessionStorage.getItem("currentUser");
 
 window.onload = function(){
@@ -20,64 +21,7 @@ window.onload = function(){
 
 function initResult(){
     initMultitaskingRecord();
-}
-
-/*
-* Drawing charts for each status
-* */
-function drawScoreChart(){
-	var data = google.visualization.arrayToDataTable(chartData);
-	var options = {
-	  title: 'Score Record',
-	  curveType: 'function',
-	  legend: { position: 'bottom' }
-	};
-	var chart = new google.visualization.LineChart(document.getElementById('score_chart'));
-	chart.draw(data, options);
-}
-
-function drawComboChart(){
-    var data = google.visualization.arrayToDataTable(comboData);
-    var options = {
-        title: 'Combo Record',
-        curveType: 'function',
-        legend: { position: 'bottom' }
-    };
-    var chart = new google.visualization.LineChart(document.getElementById('combo_chart'));
-    chart.draw(data, options);
-}
-
-function drawStoneChart(){
-    var data = google.visualization.arrayToDataTable(stoneData);
-    var options = {
-        title: 'Stone Success Rate',
-        curveType: 'function',
-        legend: { position: 'bottom' }
-    };
-    var chart = new google.visualization.LineChart(document.getElementById('stone_chart'));
-    chart.draw(data, options);
-}
-
-function drawGemChart(){
-    var data = google.visualization.arrayToDataTable(gemData);
-    var options = {
-        title: 'Gem Success Rate',
-        curveType: 'function',
-        legend: { position: 'bottom' }
-    };
-    var chart = new google.visualization.LineChart(document.getElementById('gem_chart'));
-    chart.draw(data, options);
-}
-
-function drawChestChart(){
-    var data = google.visualization.arrayToDataTable(chestData);
-    var options = {
-        title: 'Chest Success Rate',
-        curveType: 'function',
-        legend: { position: 'bottom' }
-    };
-    var chart = new google.visualization.LineChart(document.getElementById('chest_chart'));
-    chart.draw(data, options);
+    initMemoryRecord();
 }
 
 function initUI() {

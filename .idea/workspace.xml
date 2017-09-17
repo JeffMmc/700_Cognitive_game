@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe46c589-f26b-466b-83e5-5503c3c7953a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/script/memory/presistData.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/script/record/multitaskingRecord.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/script/record/memoryRecord.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/record.html" afterPath="$PROJECT_DIR$/record.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/memory/data.js" afterPath="$PROJECT_DIR$/script/memory/data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/memory/main.js" afterPath="$PROJECT_DIR$/script/memory/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/memory/pot.js" afterPath="$PROJECT_DIR$/script/memory/pot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/memory/tools.js" afterPath="$PROJECT_DIR$/script/memory/tools.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/record/multitaskingRecord.js" afterPath="$PROJECT_DIR$/script/record/multitaskingRecord.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/record/record.js" afterPath="$PROJECT_DIR$/script/record/record.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -37,18 +33,18 @@
       <file leaf-file-name="record.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/record/record.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-291">
-              <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+            <state relative-caret-position="57">
+              <caret line="3" column="69" lean-forward="true" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="record.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="record.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/record.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="72" column="37" lean-forward="true" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
+            <state relative-caret-position="456">
+              <caret line="72" column="42" lean-forward="true" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -57,83 +53,28 @@
       <file leaf-file-name="recordLogin.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/record/recordLogin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+            <state relative-caret-position="342">
+              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script/memory/data.js">
+      <file leaf-file-name="multitaskingRecord.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script/record/multitaskingRecord.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="152">
+              <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tools.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script/memory/tools.js">
+      <file leaf-file-name="memoryRecord.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script/record/memoryRecord.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="342" column="4" lean-forward="false" selection-start-line="342" selection-start-column="4" selection-end-line="345" selection-end-column="5" />
-              <folding>
-                <element signature="n#!!block;n#createClickButton#0" expanded="false" />
-                <element signature="n#!!block;n#createBackButton#0" expanded="false" />
-                <element signature="n#!!block;n#createRecipeBlock#0" expanded="false" />
-                <element signature="n#!!block;n#createEmptyRecipeBlock#0" expanded="false" />
-                <element signature="n#!!block;n#createPopupBoard#0" expanded="false" />
-                <element signature="n#!!block;n#createInstructionPopup#0" expanded="false" />
-                <element signature="n#!!block;n#hidePopupBoard#0" expanded="false" />
-                <element signature="n#!!block;n#hideTutorialPopup#0" expanded="false" />
-                <element signature="n#!!block;n#showTutorialPopup#0" expanded="false" />
-                <element signature="n#!!block;n#createInstruction#0" expanded="false" />
-                <element signature="n#!!block;n#updateInstruction#0" expanded="false" />
-                <element signature="n#!!block;n#getIngredientElement#0" expanded="false" />
-                <element signature="n#!!block;n#getIngredientLocation#0" expanded="false" />
-                <element signature="n#!!block;n#arrowHover#0" expanded="false" />
-                <element signature="n#!!block;n#removeArrowAndInstruction#0" expanded="false" />
-                <element signature="n#!!block;n#registerInterval#0" expanded="false" />
-                <element signature="n#!!block;n#clearAllInterval#0" expanded="false" />
-                <element signature="n#!!block;n#calculateResult#0" expanded="false" />
-                <element signature="n#!!block;n#setComment#0" expanded="false" />
-                <element signature="n#!!block;n#showEndTutorialPopup#0" expanded="false" />
-                <element signature="n#!!block;n#showNiceTryPopup#0" expanded="false" />
-                <element signature="n#!!block;n#loadKitchen#0" expanded="false" />
-                <element signature="n#!!block;n#clearScreen#0" expanded="false" />
-                <element signature="n#!!block;n#addToScreen#0" expanded="false" />
-                <element signature="n#!!block;n#createTimer#0" expanded="false" />
-                <element signature="n#!!block;n#stopTimer#0" expanded="false" />
-                <element signature="n#!!block;n#updateTimer#0" expanded="false" />
-                <element signature="n#!!block;n#updateScore#0" expanded="false" />
-                <element signature="n#!!block;n#loadbgm#0" expanded="false" />
-                <element signature="n#!!block;n#changebgm#0" expanded="false" />
-                <element signature="n#!!block;n#setUpbuttonSound#0" expanded="false" />
-                <element signature="n#!!block;n#playButtonSound#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/script/memory/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="63" column="15" lean-forward="true" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
-              <folding>
-                <element signature="n#!!block;n#startTutorial#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="presistData.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script/memory/presistData.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="52" lean-forward="false" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
+            <state relative-caret-position="133">
+              <caret line="7" column="68" lean-forward="false" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -213,13 +154,14 @@
         <option value="$PROJECT_DIR$/script/multitasking/scoreManager.js" />
         <option value="$PROJECT_DIR$/script/multitasking/vehicle.js" />
         <option value="$PROJECT_DIR$/script/record/tabs.js" />
-        <option value="$PROJECT_DIR$/script/record/record.js" />
-        <option value="$PROJECT_DIR$/script/record/multitaskingRecord.js" />
         <option value="$PROJECT_DIR$/script/memory/tools.js" />
         <option value="$PROJECT_DIR$/script/memory/pot.js" />
         <option value="$PROJECT_DIR$/script/memory/presistData.js" />
         <option value="$PROJECT_DIR$/script/memory/data.js" />
         <option value="$PROJECT_DIR$/script/memory/main.js" />
+        <option value="$PROJECT_DIR$/script/record/multitaskingRecord.js" />
+        <option value="$PROJECT_DIR$/script/record/memoryRecord.js" />
+        <option value="$PROJECT_DIR$/script/record/record.js" />
         <option value="$PROJECT_DIR$/record.html" />
       </list>
     </option>
@@ -276,19 +218,6 @@
               <item name="700_Cognitive_game" type="462c0819:PsiDirectoryNode" />
               <item name="script" type="462c0819:PsiDirectoryNode" />
               <item name="memory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="700_Cognitive_game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="700_Cognitive_game" type="462c0819:PsiDirectoryNode" />
-              <item name="script" type="462c0819:PsiDirectoryNode" />
-              <item name="multitasking" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="700_Cognitive_game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="700_Cognitive_game" type="462c0819:PsiDirectoryNode" />
-              <item name="script" type="462c0819:PsiDirectoryNode" />
-              <item name="multitasking" type="462c0819:PsiDirectoryNode" />
-              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="700_Cognitive_game" type="b2602c69:ProjectViewProjectNode" />
@@ -359,7 +288,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91712000" />
+    <option name="totallyTimeSpent" value="93248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -368,7 +297,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -401,18 +330,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/multitasking/multitaskingStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/multitasking/multaskingResult.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -685,14 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/record/multitaskingRecord.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/multitasking/record.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1273">
@@ -717,30 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/memory/presistData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="52" lean-forward="false" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/memory/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/record/recordLogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/multitasking/mulitasking.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
@@ -749,19 +639,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/record/record.js">
+    <entry file="file://$PROJECT_DIR$/script/memory/presistData.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-291">
-          <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        <state relative-caret-position="0">
+          <caret line="0" column="52" lean-forward="false" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/record.html">
+    <entry file="file://$PROJECT_DIR$/script/memory/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="72" column="37" lean-forward="true" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="76">
+          <caret line="82" column="49" lean-forward="true" selection-start-line="82" selection-start-column="49" selection-end-line="82" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!block;n#startTutorial#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -806,13 +698,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/memory/main.js">
+    <entry file="file://$PROJECT_DIR$/script/memory/data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="63" column="15" lean-forward="true" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
-          <folding>
-            <element signature="n#!!block;n#startTutorial#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="328">
+          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/record/memoryRecord.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="68" lean-forward="false" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/record/multitaskingRecord.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/record/recordLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/record/record.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="69" lean-forward="true" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/record.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="72" column="42" lean-forward="true" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>

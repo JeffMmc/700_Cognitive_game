@@ -39,9 +39,11 @@ function initResult(){
 		var score = document.createElement("th");
         var combo = document.createElement("th");
 
+        var userdata = JSON.parse(localStorage.getItem(currentUser + 'Mt' + i));
+
         play.innerHTML = i+1;
-        score.innerHTML = localStorage.getItem(currentUser + 'Mt' + i);
-        combo.innerHTML = localStorage.getItem(currentUser + 'MtCombo' + i);
+        score.innerHTML = userdata.score;
+        combo.innerHTML = userdata.combo;
 
         row.appendChild(play);
         row.appendChild(score);
@@ -52,9 +54,9 @@ function initResult(){
         var blockS = document.createElement("th");
         var blockR = document.createElement("th");
 
-        block.innerHTML = localStorage.getItem(currentUser + 'MtBl' + i);
-        blockS.innerHTML = localStorage.getItem(currentUser + 'MtBlS' + i);
-        var blockRate = (localStorage.getItem(currentUser + 'MtBlS' + i) / localStorage.getItem(currentUser + 'MtBl' + i)) * 100;
+        block.innerHTML = userdata.MtBl;
+        blockS.innerHTML = userdata.MtBlS;
+        var blockRate = (userdata.MtBlS / userdata.MtBl) * 100;
         blockR.innerHTML = blockRate.toFixed(2);
 
         row.appendChild(block);
@@ -66,9 +68,9 @@ function initResult(){
         var bonusS = document.createElement("th");
         var bonusR = document.createElement("th");
 
-        bonus.innerHTML = localStorage.getItem(currentUser + 'MtBo' + i);
-        bonusS.innerHTML = localStorage.getItem(currentUser + 'MtBoS' + i);
-        var bonusRate = (localStorage.getItem(currentUser + 'MtBoS' + i) / localStorage.getItem(currentUser + 'MtBo' + i)) * 100;
+        bonus.innerHTML = userdata.MtBo;
+        bonusS.innerHTML = userdata.MtBoS;
+        var bonusRate = (userdata.MtBoS / userdata.MtBo) * 100;
         bonusR.innerHTML = bonusRate.toFixed(2);
 
         row.appendChild(bonus);
@@ -80,9 +82,9 @@ function initResult(){
         var breakableS = document.createElement("th");
         var breakableR = document.createElement("th");
 
-        breakable.innerHTML = localStorage.getItem(currentUser + 'MtBr' + i);
-        breakableS.innerHTML = localStorage.getItem(currentUser + 'MtBrS' + i);
-		var breakableRate = (localStorage.getItem(currentUser + 'MtBrS' + i) / localStorage.getItem(currentUser + 'MtBr' + i)) * 100;
+        breakable.innerHTML = userdata.MtBr;
+        breakableS.innerHTML = userdata.MtBrS;
+		var breakableRate = (userdata.MtBrS / userdata.MtBr) * 100;
 		breakableR.innerHTML = breakableRate.toFixed(2);
 
 		row.appendChild(breakable);
@@ -90,14 +92,16 @@ function initResult(){
 		row.appendChild(breakableR);
 
         dataTable.appendChild(row);
-		
+        console.log(userdata.score);
 		i += 1;
-		chartData[i] = ["Play" + i,  parseInt(localStorage.getItem(currentUser + 'Mt' + (i-1)))];
-        comboData[i] = ["Play" + i,  parseInt(localStorage.getItem(currentUser + 'MtCombo' + (i-1)))];
+		chartData[i] = ["Play" + i,  parseInt(userdata.score)];
+        comboData[i] = ["Play" + i,  parseInt(userdata.combo)];
         stoneData[i] = ["Play" + i, parseInt(blockRate) ];
         gemData[i] = ["Play" + i,  parseInt(bonusRate)];
         chestData[i] = ["Play" + i,  parseInt(breakableRate)];
 	}
+
+
 	
 	var startIndex;
 	if(i > 19){
@@ -117,16 +121,12 @@ function initResult(){
 	replayButton.onclick = function(){
 		window.location.replace("multitasking.html");
 	}
-	
-	
-	console.log("Block : " + localStorage.getItem('currentBl'));
-	console.log("Success : " + localStorage.currentBlS);
-	console.log("Bonus : " + localStorage.currentBo);
-	console.log("Success : " + localStorage.currentBoS);
-	console.log("Breakable : " +  localStorage.currentBr);
-	console.log("Success : " +  localStorage.currentBrS);
+
 }
 
+/*
+* Drawing charts for each status
+* */
 function drawScoreChart(){
 	var data = google.visualization.arrayToDataTable(chartData);
 	var options = {

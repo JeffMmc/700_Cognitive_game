@@ -28,14 +28,19 @@ function initResult(){
 
     var scoreIndex = 0;
     for (var key in localStorage){
-        if(key.substr(0, currentUser.length+5) == currentUser + "Mt"){
+        //console.log(key.substr(0, currentUser.length+2));
+        if(key.substr(0, currentUser.length+2) == currentUser + "Mt"){
             scoreIndex += 1;
         }
     }
 
-	//var lastScore = localStorage.getItem(currentUser+"Mt"+scoreIndex);
-	var userdata = JSON.parse(localStorage.getItem(currentUser+"Mtl"+scoreIndex));
+    scoreIndex -= 1;
+    //var lastScore = localStorage.getItem(currentUser+"Mt"+scoreIndex);
+	var userdata = JSON.parse(localStorage.getItem(currentUser+"Mt"+scoreIndex));
 	var lastScore = userdata.score;
+	//var lastScore = 0;
+
+
 
 	//New High Score
 	if(sessionStorage.getItem("newHighScore") == 1){

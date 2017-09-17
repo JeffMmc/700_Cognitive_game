@@ -60,12 +60,14 @@ function obstacleMove(){
 
 				scoreSE.play();
 			}else if(obstacle[i].className=="bonus obstacle"){
+                bonus += 1;
 				collision = true;
                 try{
                     resetCombo();
                 }catch (err){};
 
 			}else if(obstacle[i].className=="breakable obstacle"){
+                breakable += 1;
                 collision = true;
                 try{
                     resetCombo();

@@ -28,16 +28,17 @@ function initResult(){
 
     var scoreIndex = 0;
     for (var key in localStorage){
-        if(key.substr(0, currentUser.length+5) == currentUser + "MtBlS"){
+        if(key.substr(0, currentUser.length+5) == currentUser + "Mt"){
             scoreIndex += 1;
         }
     }
-	scoreIndex -=1;
-	var lastScore = localStorage.getItem(currentUser+"Mt"+scoreIndex);
+
+	//var lastScore = localStorage.getItem(currentUser+"Mt"+scoreIndex);
+	var userdata = JSON.parse(localStorage.getItem(currentUser+"Mtl"+scoreIndex));
+	var lastScore = userdata.score;
 
 	//New High Score
 	if(sessionStorage.getItem("newHighScore") == 1){
-
         newHighScore.innerHTML = "New High Score!";
         data.appendChild(newHighScore);
 	}
@@ -79,11 +80,4 @@ function initResult(){
 	
 	menu.appendChild(backButton);
 	menu.appendChild(replayButton);
-
-	console.log("Block : " + sessionStorage.getItem('currentBl'));
-	console.log("Success : " + sessionStorage.currentBlS);
-	console.log("Bonus : " + sessionStorage.currentBo);
-	console.log("Success : " + sessionStorage.currentBoS);
-	console.log("Breakable : " +  sessionStorage.currentBr);
-	console.log("Success : " +  sessionStorage.currentBrS);
 }

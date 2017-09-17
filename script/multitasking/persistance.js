@@ -27,14 +27,21 @@ function recordMultaskingScore(){
 
 //Store score into localStorage
 function persistScore(scoreIndex){
-		localStorage.setItem(currentUser + 'Mt' + scoreIndex, score);
-		localStorage.setItem(currentUser +'MtBl' + scoreIndex, block);
-		localStorage.setItem(currentUser +'MtBlS' + scoreIndex, blockSuccess);
-		localStorage.setItem(currentUser +'MtBo' + scoreIndex, bonus);
-		localStorage.setItem(currentUser +'MtBoS' + scoreIndex, bonusSuccess);
-		localStorage.setItem(currentUser +'MtBr' + scoreIndex, breakable);
-		localStorage.setItem(currentUser +'MtBrS' + scoreIndex, breakableSuccess);
-    	localStorage.setItem(currentUser +'MtCombo' + scoreIndex, maxCombo);
+    var userData = {'MtBl':block,'MtBlS':blockSuccess,
+        'MtBo':bonus,'MtBoS':bonusSuccess,
+        'MtBr':breakable,'MtBrS':breakableSuccess,
+        'score':score,'combo':maxCombo
+    };
+
+    localStorage.setItem(currentUser+'Mtl'+scoreIndex, JSON.stringify(userData));
+    localStorage.setItem(currentUser + 'Mt' + scoreIndex, score);
+	localStorage.setItem(currentUser +'MtBl' + scoreIndex, block);
+	localStorage.setItem(currentUser +'MtBlS' + scoreIndex, blockSuccess);
+	localStorage.setItem(currentUser +'MtBo' + scoreIndex, bonus);
+	localStorage.setItem(currentUser +'MtBoS' + scoreIndex, bonusSuccess);
+	localStorage.setItem(currentUser +'MtBr' + scoreIndex, breakable);
+	localStorage.setItem(currentUser +'MtBrS' + scoreIndex, breakableSuccess);
+	localStorage.setItem(currentUser +'MtCombo' + scoreIndex, maxCombo);
 }
 
 //For debugging

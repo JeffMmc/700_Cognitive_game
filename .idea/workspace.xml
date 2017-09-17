@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe46c589-f26b-466b-83e5-5503c3c7953a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/multitasking/multaskingResult.js" afterPath="$PROJECT_DIR$/script/multitasking/multaskingResult.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/multitasking/persistance.js" afterPath="$PROJECT_DIR$/script/multitasking/persistance.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/multitasking/scoreManager.js" afterPath="$PROJECT_DIR$/script/multitasking/scoreManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/multitasking/tutorial/multitaskingTutorial.js" afterPath="$PROJECT_DIR$/script/multitasking/tutorial/multitaskingTutorial.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/multitasking/vehicle.js" afterPath="$PROJECT_DIR$/script/multitasking/vehicle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/record/record.js" afterPath="$PROJECT_DIR$/script/record/record.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/record/tabs.js" afterPath="$PROJECT_DIR$/script/record/tabs.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,71 +25,18 @@
       <file leaf-file-name="mulitasking.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/multitasking/mulitasking.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="50" column="51" lean-forward="true" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+            <state relative-caret-position="114">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="obstacles.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script/multitasking/obstacles.js">
+      <file leaf-file-name="recordLogin.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/script/record/recordLogin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-33">
-              <caret line="69" column="31" lean-forward="false" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
-              <folding>
-                <element signature="n#!!block;n#destroyObstacle#0" expanded="false" />
-                <element signature="n#!!block;n#destroyChest#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script/memory/data.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="57" column="1" lean-forward="true" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="persistance.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script/multitasking/persistance.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="multitaskingTutorial.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script/multitasking/tutorial/multitaskingTutorial.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="72" column="14" lean-forward="true" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="multaskingResult.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/script/multitasking/multaskingResult.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="record.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script/record/record.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="41" column="72" lean-forward="true" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
+            <state relative-caret-position="38">
+              <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -142,12 +92,9 @@
         <option value="$PROJECT_DIR$/script/multitasking/mulitaskingUI.js" />
         <option value="$PROJECT_DIR$/recordLogin.html" />
         <option value="$PROJECT_DIR$/css/record.css" />
-        <option value="$PROJECT_DIR$/script/record/tabs.js" />
         <option value="$PROJECT_DIR$/record.html" />
         <option value="$PROJECT_DIR$/script/record/recordLogin.js" />
-        <option value="$PROJECT_DIR$/script/multitasking/scoreManager.js" />
         <option value="$PROJECT_DIR$/css/multitasking/style.css" />
-        <option value="$PROJECT_DIR$/script/multitasking/vehicle.js" />
         <option value="$PROJECT_DIR$/menu.html" />
         <option value="$PROJECT_DIR$/script/menu.js" />
         <option value="$PROJECT_DIR$/script/checkLogin.js" />
@@ -160,12 +107,15 @@
         <option value="$PROJECT_DIR$/script/login.js" />
         <option value="$PROJECT_DIR$/script/memory/data.js" />
         <option value="$PROJECT_DIR$/script/memory/main.js" />
-        <option value="$PROJECT_DIR$/script/multitasking/tutorial/multitaskingTutorial.js" />
         <option value="$PROJECT_DIR$/script/multitasking/mulitasking.js" />
         <option value="$PROJECT_DIR$/script/multitasking/obstacles.js" />
-        <option value="$PROJECT_DIR$/script/record/record.js" />
         <option value="$PROJECT_DIR$/script/multitasking/persistance.js" />
         <option value="$PROJECT_DIR$/script/multitasking/multaskingResult.js" />
+        <option value="$PROJECT_DIR$/script/record/record.js" />
+        <option value="$PROJECT_DIR$/script/multitasking/tutorial/multitaskingTutorial.js" />
+        <option value="$PROJECT_DIR$/script/multitasking/scoreManager.js" />
+        <option value="$PROJECT_DIR$/script/multitasking/vehicle.js" />
+        <option value="$PROJECT_DIR$/script/record/tabs.js" />
       </list>
     </option>
   </component>
@@ -304,7 +254,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81270000" />
+    <option name="totallyTimeSpent" value="84251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -475,13 +425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/record/tabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/multitasking/hammer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="880">
@@ -493,22 +436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1273">
           <caret line="67" column="1" lean-forward="false" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/record/recordLogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/multitasking/scoreManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -609,14 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/multitasking/vehicle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -645,14 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="60" lean-forward="true" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/multitasking/mulitasking.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="50" column="51" lean-forward="true" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -698,17 +609,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/record/record.js">
+    <entry file="file://$PROJECT_DIR$/script/multitasking/persistance.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="41" column="72" lean-forward="true" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
+        <state relative-caret-position="703">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/multitasking/multaskingResult.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/memory/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/multitasking/tutorial/multitaskingTutorial.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/multitasking/vehicle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/multitasking/scoreManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/script/multitasking/obstacles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
+        <state relative-caret-position="-519">
           <caret line="69" column="31" lean-forward="false" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
           <folding>
             <element signature="n#!!block;n#destroyObstacle#0" expanded="false" />
@@ -717,34 +668,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/memory/data.js">
+    <entry file="file://$PROJECT_DIR$/script/multitasking/mulitasking.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="57" column="1" lean-forward="true" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+        <state relative-caret-position="114">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/multitasking/tutorial/multitaskingTutorial.js">
+    <entry file="file://$PROJECT_DIR$/script/record/record.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="72" column="14" lean-forward="true" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
+        <state relative-caret-position="2012">
+          <caret line="181" column="68" lean-forward="true" selection-start-line="181" selection-start-column="68" selection-end-line="181" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/multitasking/persistance.js">
+    <entry file="file://$PROJECT_DIR$/script/record/tabs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="46" />
+        <state relative-caret-position="361">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/multitasking/multaskingResult.js">
+    <entry file="file://$PROJECT_DIR$/script/record/recordLogin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        <state relative-caret-position="38">
+          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
           <folding />
         </state>
       </provider>

@@ -4,6 +4,7 @@ function updateScore(){
 	scoreText.innerHTML = "Score : " + score;
 }
 
+//Check player's performance and change the speed
 function updateSpeed(){
 	if (!collision && overallSpeed <= 10){
 		overallSpeed += 1;

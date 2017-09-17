@@ -10,6 +10,7 @@ window.onload = function(){
     resumeInterval();
 }
 
+//Init UI
 function startTutorial(){
     canvas = document.getElementById("gc");
     tutorialScoreBar();
@@ -26,21 +27,23 @@ function startTutorial(){
 
     }
     canvas.appendChild(skipButton());
-
 }
 
+//Pause or end the tutorial
 function pauseInterval(){
     clearInterval(generateInterval);
     clearInterval(moveInterval);
     clearInterval(roadMovingInterval);
 }
 
+//Start or resume the tutorial
 function resumeInterval() {
     setInterval(tutorialFlow, 2500, 0, 0);
     moveInterval = setInterval(obstacleMove, 1000/30);
     roadMovingInterval = setInterval(tutorialRoadMoving, 1000/30);
 }
 
+//Road moving for tutorial
 function tutorialRoadMoving(){
     for(var j = 0; j < 2; j++){
         if(fields[0].tracks[j].yPos <= 400){
@@ -53,6 +56,7 @@ function tutorialRoadMoving(){
     }
 }
 
+//Generate custom obstacle for tutorial
 function tutorialGenerateObstacle(obsNum){
     var tracks = document.getElementsByClassName("track");
 
@@ -102,6 +106,7 @@ function tutorialGenerateObstacle(obsNum){
 
 }
 
+//Instruction panel for tutorial
 function tutorialScoreBar(){
     tutorialScoreBar = scorebar();
     tutorialScoreBar.innerHTML = "";
@@ -114,6 +119,11 @@ function tutorialScoreBar(){
     tutorialScoreBar.text = tutorialText;
 }
 
+// Control the stage of tutorial
+// Stage0: introduction
+// Stage1: stone
+// Stage2: gem
+// Stage3: chest
 function tutorialFlow(){
 
     if(tutorialStart){

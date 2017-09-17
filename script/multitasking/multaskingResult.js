@@ -4,14 +4,6 @@ var scorebar, data, menu;
 window.onload = function(){
 	checkLogin();
     initResult();
-    for (var key in localStorage){
-        console.log(key + " : " + localStorage.getItem(key));
-        //localStorage.removeItem(key);
-    }
-    for (var key in sessionStorage){
-        console.log(key + " : " + sessionStorage.getItem(key));
-        //localStorage.removeItem(key);
-    }
 }
 
 function initResult(){
@@ -28,19 +20,14 @@ function initResult(){
 
     var scoreIndex = 0;
     for (var key in localStorage){
-        //console.log(key.substr(0, currentUser.length+2));
         if(key.substr(0, currentUser.length+2) == currentUser + "Mt"){
             scoreIndex += 1;
         }
     }
 
     scoreIndex -= 1;
-    //var lastScore = localStorage.getItem(currentUser+"Mt"+scoreIndex);
 	var userdata = JSON.parse(localStorage.getItem(currentUser+"Mt"+scoreIndex));
 	var lastScore = userdata.score;
-	//var lastScore = 0;
-
-
 
 	//New High Score
 	if(sessionStorage.getItem("newHighScore") == 1){

@@ -36,11 +36,3 @@ function persistScore(scoreIndex){
     localStorage.setItem(currentUser+'Mt'+scoreIndex, JSON.stringify(userData));
 }
 
-//For debugging
-function printRecord(){
-	var i = 0;
-	while (localStorage.getItem('Mt' + i) != null){
-		console.log(i + " : " + localStorage.getItem('Mt' + i));
-		i += 1;
-	}
-}

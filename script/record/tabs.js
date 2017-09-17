@@ -1,3 +1,4 @@
+//Tab element for record page
 function openChart(evt, dataName) {
     // Declare all variables
     var i, tabcontent, tablinks;

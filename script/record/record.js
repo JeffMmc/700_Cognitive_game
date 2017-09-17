@@ -31,6 +31,7 @@ function initResult(){
 	var dataTable = document.getElementById("data_table");
 	
 	var i = 0;
+	//Iterate all playhistory of the user
 	while(localStorage.getItem(currentUser + 'Mt' + i) != null){
 		var row = document.createElement("tr");
 
@@ -99,15 +100,6 @@ function initResult(){
         stoneData[i] = ["Play" + i, parseInt(blockRate) ];
         gemData[i] = ["Play" + i,  parseInt(bonusRate)];
         chestData[i] = ["Play" + i,  parseInt(breakableRate)];
-	}
-
-
-	
-	var startIndex;
-	if(i > 19){
-		chartDataNum = i+1;
-	}else{
-		startIndex = 1;
 	}
 	
 	var backButton = document.createElement("button");

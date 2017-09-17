@@ -7,16 +7,7 @@ var currentUser = sessionStorage.getItem("currentUser");
 window.onload = function(){
     initResult();
     initUI();
-	google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawScoreChart);
-    google.charts.setOnLoadCallback(drawComboChart);
-    google.charts.setOnLoadCallback(drawStoneChart);
-    google.charts.setOnLoadCallback(drawGemChart);
-    google.charts.setOnLoadCallback(drawChestChart);
-	for (var key in localStorage){
-		console.log(key + " : " + localStorage.getItem(key));
-		//localStorage.removeItem(key);
-	}
+    initCharts();
 }
 
 function initResult(){
@@ -30,4 +21,22 @@ function initUI() {
     	window.location.replace("recordLogin.html");
 	}
     document.getElementById("record_back").style.marginTop = "10px";
+}
+
+function initCharts(){
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawScoreChart);
+    google.charts.setOnLoadCallback(drawComboChart);
+    google.charts.setOnLoadCallback(drawStoneChart);
+    google.charts.setOnLoadCallback(drawGemChart);
+    google.charts.setOnLoadCallback(drawChestChart);
+    google.charts.setOnLoadCallback(drawScoreChartA);
+    google.charts.setOnLoadCallback(drawScoreChartB);
+    google.charts.setOnLoadCallback(drawScoreChartC);
+    google.charts.setOnLoadCallback(drawTimeChartA);
+    google.charts.setOnLoadCallback(drawTimeChartB);
+    google.charts.setOnLoadCallback(drawTimeChartC);
+    google.charts.setOnLoadCallback(drawRateChartA);
+    google.charts.setOnLoadCallback(drawRateChartB);
+    google.charts.setOnLoadCallback(drawRateChartC);
 }

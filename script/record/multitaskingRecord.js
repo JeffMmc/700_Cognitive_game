@@ -97,7 +97,7 @@ function initMultitaskingRecord() {
 
 /*
 * Drawing charts for each status
-* Mostly duplicate but don't have better soultion
+* Mostly duplicate but don't have better solution
 * */
 function drawScoreChart(){
     var data = google.visualization.arrayToDataTable(chartData);

@@ -8,8 +8,13 @@
         <div id="gc">
 
 			<div id="data">
-				<div id="multitasking_data">
-					<h1 id="user_name"></h1>
+				<h1 id="user_name"></h1>
+				<div class="tab">
+					<button class="tablinks" onclick="openChart(event, 'memory_data')">Memory</button>
+					<button class="tablinks" onclick="openChart(event, 'multitasking_data')">Multitasking</button>
+				</div>
+				<div id="multitasking_data" class="tabcontent">
+
 					<h2>Multitasking</h2>
 					<div class="tab">
 						<button class="tablinks" onclick="openChart(event, 'Score')">Score</button>
@@ -56,16 +61,66 @@
 						</tr>
 					</table>
 				</div>
-				<div id = "memory_data">
+				<div id = "memory_data" class="tabcontent">
 					<h2>Memory</h2>
+
+					<!--Tab for level1-->
 					<div class="tab">
-						<button class="tablinks" onclick="openChart(event, 'Score')">Score</button>
-						<button class="tablinks" onclick="openChart(event, 'Combo')">Combo</button>
-						<button class="tablinks" onclick="openChart(event, 'Stone')">Stone</button>
-						<button class="tablinks" onclick="openChart(event, 'Gem')">Gem</button>
-						<button class="tablinks" onclick="openChart(event, 'Chest1')">Chest</button>
+						<button class="tablinks" onclick="openChart(event, 'mScoreA')">Level1 Score</button>
+						<button class="tablinks" onclick="openChart(event, 'mTimeA')">Time</button>
+						<button class="tablinks" onclick="openChart(event, 'mRateA')">Accuracy</button>
 					</div>
 
+					<div id="mScoreA" class="tabcontent">
+						<div id="score_chartA"> </div>
+					</div>
+
+					<div id="mTimeA" class="tabcontent">
+						<div id="time_chartA"> </div>
+					</div>
+
+					<div id="mRateA" class="tabcontent">
+						<div id="rate_chartA"> </div>
+					</div>
+
+					<!--Tab for level2-->
+					<div class="tab">
+						<button class="tablinks" onclick="openChart(event, 'mScoreB')">Level2 Score</button>
+						<button class="tablinks" onclick="openChart(event, 'mTimeB')">Time</button>
+						<button class="tablinks" onclick="openChart(event, 'mRateB')">Accuracy</button>
+					</div>
+
+					<div id="mScoreB" class="tabcontent">
+						<div id="score_chartB"> </div>
+					</div>
+
+					<div id="mTimeB" class="tabcontent">
+						<div id="time_chartB"> </div>
+					</div>
+
+					<div id="mRateB" class="tabcontent">
+						<div id="rate_chartB"> </div>
+					</div>
+
+					<!--Tab for level3-->
+					<div class="tab">
+						<button class="tablinks" onclick="openChart(event, 'mScoreC')">Level3 Score</button>
+						<button class="tablinks" onclick="openChart(event, 'mTimeC')">Time</button>
+						<button class="tablinks" onclick="openChart(event, 'mRateC')">Accuracy</button>
+					</div>
+
+					<div id="mScoreC" class="tabcontent">
+						<div id="score_chartC"> </div>
+					</div>
+
+					<div id="mTimeC" class="tabcontent">
+						<div id="time_chartC"> </div>
+					</div>
+
+					<div id="mRateC" class="tabcontent">
+						<div id="rate_chartC"> </div>
+					</div>
+					<!--Data Tabel-->
 					<table id="memory_table">
 						<tr>
 							<th>Play</th>

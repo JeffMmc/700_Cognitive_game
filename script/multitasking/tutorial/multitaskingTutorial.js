@@ -23,9 +23,9 @@ function startTutorial(){
     currentUser = sessionStorage.getItem("currentUser");
 
     if(!(localStorage.getItem(currentUser + "passTutorial") === null)){
-        canvas.appendChild(skipButton());
-    }
 
+    }
+    canvas.appendChild(skipButton());
 }
 
 function pauseInterval(){

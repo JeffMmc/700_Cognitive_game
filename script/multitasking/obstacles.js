@@ -5,30 +5,10 @@ function generateObstacle(){
     for(var i = 0; i < 2; i++){
 
         var obstacleTypeNum = Math.floor(Math.random() * 3);
-
         var obs = obstacle(obstacleType[obstacleTypeNum]);
 
         tracks[Math.floor(Math.random() * 2) + i * 2].appendChild(obs);
 
-
-        switch (obstacleTypeNum) {
-            //Action of breakable
-            case 2:
-                obs.onclick = function(){
-                    breakable += 1;
-                    breakableSuccess += 1;
-                    this.classList = "breakablesub";
-                    var b = this;
-                    try{
-                        countCombo();
-                    }catch (err){};
-                    scoreSE.play();
-                    setTimeout(function(){
-                        destroyObstacle(b);
-                    }, 1000);
-                };
-                break;
-        }
     }
 }
 
@@ -42,7 +22,22 @@ function obstacle(obsType){
 	obstacle.classList.add("obstacle");
 	obstacle.style.top = obstacle.posY + 'px';
 	obstacle.style.left = obstacle.posX + 'px';
+	obstacle.style.display = "inline";
 
+	//Handle onclick event
+	if(obsType == "breakable"){
+        var hammer = new Hammer(obstacle);
+        hammer.on("panleft panright tap press", function (ev) {
+            breakable += 1;
+            breakableSuccess += 1;
+            obstacle.classList = "breakablesub";
+            try{
+                countCombo();
+            }catch (err){};
+            scoreSE.play();
+            destroyChest(obstacle);
+        });
+	}
 	return obstacle;
 }
 
@@ -118,6 +113,14 @@ function obstacleMove(){
 	}
 }
 
+//Destory obstacle instantly
 function destroyObstacle(obs){
 	obs.parentNode.removeChild(obs);
+}
+
+//Destroy function for chest which has delay
+function destroyChest(obs){
+	setTimeout(function () {
+        obs.parentNode.removeChild(obs);
+    }, 1000);
 }

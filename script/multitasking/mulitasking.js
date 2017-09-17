@@ -52,7 +52,7 @@ function resumeInterval() {
 	speedInterval = setInterval(updateSpeed, 10000);
 	timerInterval = setInterval(updateTimer, 1000);
 	roadMovingInterval = setInterval(roadMoving, 1000/30);
-    bgm.play();
+    //bgm.play();
 }
 
 //End of the game. Save play result to session storage.

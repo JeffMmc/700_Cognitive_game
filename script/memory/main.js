@@ -1,10 +1,9 @@
 /**Refer to tools.js for a list of functions to help create elements, etc */
-userName='Jing';
+userName=sessionStorage.getItem("currentUser");
 currentLevel=0;
 hint=-1;
 window.onload = function(){
     checkLogin();
-    localStorage.clear();
     initialData(userName); 
     //<embed src="/music/good_enough.mp3" width="180" height="90" loop="false" autostart="false" hidden="true" />
     //wait till everything is loaded before doing DOM manipulation
@@ -234,7 +233,9 @@ function goToMainScreen(){
     var tutorialButton = createClickButton("Tutorial", startTutorial);
     var levelButton = createClickButton("Level Selection", goToLevelSelection);
     var settingsButton = createClickButton("Settings",  goToSetting);
-    var userButton = createClickButton("Change User", function(){});
+    var userButton = createClickButton("Back To Menu", function(){
+        window.location.replace("menu.html");
+    });
 
     addToScreen(tutorialButton,levelButton,settingsButton,userButton);
 };

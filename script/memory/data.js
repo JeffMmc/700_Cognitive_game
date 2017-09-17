@@ -1,4 +1,6 @@
-function initialData(userName){	
+var currentUser = sessionStorage.getItem("currentUser");
+
+function initialData(userName){
 	console.log('current User:'+userName);
 	if(!localStorage[userName]){
 		console.log('create User:'+userName);
@@ -53,7 +55,11 @@ function saveNewScore(userName,variable,value){
 function getData(userName,variable){
 	 var userData=JSON.parse(localStorage[userName]);
 	 return userData[variable];
-	
+}
+
+function getAllData(userName){
+    var userData=JSON.parse(localStorage[userName]);
+    return userData;
 }
 
 function increment(userName,variable){	
@@ -64,4 +70,16 @@ function increment(userName,variable){
 	localStorage[userName]=JSON.stringify(userData);
 	console.log(userData[variable]);
 
+}
+
+//Store score into localStorage
+function persistScore(scoreIndex){
+    localStorage.setItem(currentUser + 'Mt' + scoreIndex, score);
+    localStorage.setItem(currentUser +'MtBl' + scoreIndex, block);
+    localStorage.setItem(currentUser +'MtBlS' + scoreIndex, blockSuccess);
+    localStorage.setItem(currentUser +'MtBo' + scoreIndex, bonus);
+    localStorage.setItem(currentUser +'MtBoS' + scoreIndex, bonusSuccess);
+    localStorage.setItem(currentUser +'MtBr' + scoreIndex, breakable);
+    localStorage.setItem(currentUser +'MtBrS' + scoreIndex, breakableSuccess);
+    localStorage.setItem(currentUser +'MtCombo' + scoreIndex, maxCombo);
 }

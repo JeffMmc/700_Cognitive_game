@@ -6,6 +6,7 @@ window.onload = function(){
     document.getElementById("register_panel").style.display = 'none';
 }
 
+//Check local storage and generate name tag
 function generateExistUser(){
     var userlist = document.getElementById("id_List");
 

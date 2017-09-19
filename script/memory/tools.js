@@ -156,7 +156,8 @@ function hideTutorialPopup(){
         updateInstruction("Click on rice to add it back into the pot");
         //update the onclick method of rice
         var rice = getIngredientElement("rice", "ingredient-block");
-        rice.setAttribute("onclick", "pot.addTutorialIngredient('rice',true)");
+        var riceIndex = rice.getAttribute("id").split("-")[1];
+        rice.setAttribute("onclick", "ingredients.selectTutorialIngredient(" + riceIndex + ",'rice', true)");
         document.getElementById("recipe-book").setAttribute("onclick", ""); //disabled it until you reach the point to enable.
         addToScreen(arrow);
     }

@@ -12,6 +12,26 @@ html, body {
     display:none !important;
 }
 
+.selected {
+    border: 2px dashed blue;
+    border-radius:10px;
+}
+
+.selected > img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    opacity: 0.3;
+}
+
+#selected-description{
+    position: absolute;
+    text-align: center;
+    pointer-events: none;
+    width:60px;
+    font-weight: bold;
+}
+
 .kitchen {
     background: url("../../assets/img/kitchen.png") no-repeat;
 }

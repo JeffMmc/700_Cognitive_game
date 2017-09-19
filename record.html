@@ -9,11 +9,9 @@
 
 			<div id="data">
 				<h1 id="user_name"></h1>
-				<div class="tab">
-					<button class="tablinks" onclick="openChart(event, 'memory_data')">Memory</button>
-					<button class="tablinks" onclick="openChart(event, 'multitasking_data')">Multitasking</button>
-				</div>
-				<div id="multitasking_data" class="tabcontent">
+				<button onclick="selectData('memory_data','multitasking_data')">Memory</button>
+				<button onclick="selectData('multitasking_data','memory_data')">Multitasking</button>
+				<div id="multitasking_data">
 
 					<h2>Multitasking</h2>
 					<div class="tab">
@@ -61,7 +59,7 @@
 						</tr>
 					</table>
 				</div>
-				<div id = "memory_data" class="tabcontent">
+				<div id = "memory_data">
 					<h2>Memory</h2>
 
 					<!--Tab for level1-->

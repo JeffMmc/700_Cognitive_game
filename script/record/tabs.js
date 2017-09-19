@@ -19,3 +19,8 @@ function openChart(evt, dataName) {
     document.getElementById(dataName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+function selectData(open, close){
+    document.getElementById(open).style.display = null;
+    document.getElementById(close).style.display = "none";
+}

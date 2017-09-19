@@ -8,6 +8,7 @@ window.onload = function(){
     initResult();
     initUI();
     initCharts();
+    document.getElementById("multitasking_data").style.display = "none";
 }
 
 function initResult(){

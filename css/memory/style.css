@@ -28,6 +28,7 @@ html, body {
     position: absolute;
     text-align: center;
     pointer-events: none;
+    background-color:white;
     width:60px;
     font-weight: bold;
 }

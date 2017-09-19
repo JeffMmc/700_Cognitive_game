@@ -23,10 +23,11 @@ function startTutorial(){
 
     currentUser = sessionStorage.getItem("currentUser");
 
+    canvas.appendChild(backButton());
     if(!(localStorage.getItem(currentUser + "passTutorial") === null)){
-
+        canvas.appendChild(skipButton());
     }
-    canvas.appendChild(skipButton());
+
 }
 
 //Pause or end the tutorial
@@ -208,4 +209,17 @@ function skipButton(){
     skipButton.style.top = "350px";
     skipButton.style.left = "650px";
     return skipButton;
+}
+
+function backButton(){
+    var backButton = document.createElement("button");
+    backButton.onclick = function () {
+        window.location.replace("menu.html");
+    }
+    backButton.classList.add("startGame");
+    backButton.innerHTML = "Back";
+    backButton.style.position = "absolute";
+    backButton.style.top = "420px";
+    backButton.style.left = "60px";
+    return backButton;
 }

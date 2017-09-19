@@ -23,7 +23,9 @@ function initialData(userName){
 
 function checkHighScore(newValue,array){
 	console.log('loooooooooooooooooooook : '+array);
-	if((newValue>Math.max(array))||array.length){
+	console.log("Max array:"+　Math.max.apply(null, array));
+	var maxVal = Math.max.apply(null, array);
+	if((newValue>maxVal) ||(array.length<1)){
 		var userData=JSON.parse(localStorage[userName]);
 		userData['highScore'+currentLevel]=newValue;
 		localStorage[userName]=JSON.stringify(userData);
@@ -36,8 +38,8 @@ function checkHighScore(newValue,array){
 function saveNewScore(userName,variable,value){
 	var userData=JSON.parse(localStorage[userName]);
 	var records=userData[variable];
-	records.push(value);
 	var newRecords=checkHighScore(value,records);
+	records.push(value);
 	localStorage[userName]=JSON.stringify(userData);
 	if(newRecords){
 		return true;

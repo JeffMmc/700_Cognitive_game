@@ -338,8 +338,8 @@ function showEndGamePopup(){
     goToLevelScreen.className = "close-button";
     
     board.appendChild(goToLevelScreen);
-    TimeUsed=0;
     persistScore();
+    timeUsed=0;
     for (var key in localStorage){
         console.log(key + " : " + localStorage.getItem(key));
         //localStorage.removeItem(key);

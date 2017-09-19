@@ -1,1 +1,4 @@
-var preLevel, preScore, preCorrect = 0, preWrong = 0;
+var preLevel;
+var preScore; 
+preCorrect = 0;
+preWrong = 0;

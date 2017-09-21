@@ -215,8 +215,8 @@ html, body {
 {
 	border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,.3);
-    box-shadow: inset 0 0 6px rgba(255,255,255,.3);
-	background-color: transparent;
+    box-shadow: inset 0 0 6px rgba(255,255,255,.9);
+    background-color: #fa8132;
 }
 
 .board-text {

@@ -175,6 +175,8 @@ function Pot(dishes,recipes){
     }
 
     this.cookDish = function(){
+        ingredients.clearDescription();
+        ingredients.clearSelect();
         var ingredientsObject = {};
         var current = this.getCurrentDish();
         var currentRecipe = this.recipes[current];
@@ -222,7 +224,8 @@ function Pot(dishes,recipes){
         increment(userName,'correct'+currentLevel);
         preCorrect+=1;
         score++;
-        this.getNextDish(); //this checks for win condition.
+        this.getNextDish();
+         //this checks for win condition.
         
 
     }

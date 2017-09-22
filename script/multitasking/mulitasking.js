@@ -1,6 +1,6 @@
 window.onload = function(){
 	checkLogin();
-	countdown = 10;
+	countdown = 120;
 	statrGame();
 	updateScore(0);
 	updateSpeedText();

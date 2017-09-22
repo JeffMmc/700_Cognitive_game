@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe46c589-f26b-466b-83e5-5503c3c7953a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/multitasking/mulitasking.js" afterPath="$PROJECT_DIR$/script/multitasking/mulitasking.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/multitasking/tutorial/multitaskingTutorial.js" afterPath="$PROJECT_DIR$/script/multitasking/tutorial/multitaskingTutorial.js" />
-    </list>
+    <list default="true" id="fe46c589-f26b-466b-83e5-5503c3c7953a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -265,12 +262,12 @@
       <workItem from="1505624517822" duration="3305000" />
       <workItem from="1505772452643" duration="155000" />
       <workItem from="1505811139090" duration="1119000" />
-      <workItem from="1505826692884" duration="423000" />
+      <workItem from="1505826692884" duration="514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97991000" />
+    <option name="totallyTimeSpent" value="98082000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
